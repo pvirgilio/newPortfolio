@@ -1,13 +1,29 @@
 "use client";
 import { Button } from "@nextui-org/button";
-import { SvgIntroduction } from "./svgIntroduction";
-import { GithubIcon } from "../icons";
 import Icons from "./icons";
 import { Image, Link } from "@nextui-org/react";
+import { useEffect } from "react";
 
 export function IntroductionSection() {
+  useEffect(() => {
+    function setDynamicHeight() {
+      const vh = window.innerHeight * 0.01;
+
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+    // Set the height initially
+    setDynamicHeight();
+    // Update the height on resize
+    window.addEventListener("resize", setDynamicHeight);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", setDynamicHeight);
+    };
+  }, []);
+
   return (
-    <section className="relative w-full bg-gradient-to-r min-h-[93vh] from-[#AD2B49] to-transparent flex flex-col items-center">
+    <section className="relative w-full bg-gradient-to-r min-h-[calc(var(--vh,1vh)*92)] from-[#AD2B49] to-transparent flex flex-col items-center">
       <article className=" container flex flex-col items-center pt-4 z-10">
         <div className="flex justify-center flex-wrap gap-1 text-3xl font-bold text-center">
           <h1 className="">Olá, meu nome é</h1>

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .h-mobile {
+    height: calc(var(--var, 1vh) * 100);
+  }
+}
