@@ -3,18 +3,17 @@ import { Button } from "@nextui-org/button";
 import { SvgIntroduction } from "./svgIntroduction";
 import { GithubIcon } from "../icons";
 import Icons from "./icons";
-import { Link } from "@nextui-org/react";
-import Image from "next/image";
+import { Image, Link } from "@nextui-org/react";
 
 export function IntroductionSection() {
   return (
-    <section className="relative w-full bg-gradient-to-r min-h-screen from-[#AD2B49] to-transparent flex flex-col items-center">
+    <section className="relative w-full bg-gradient-to-r min-h-[95vh] from-[#AD2B49] to-transparent flex flex-col items-center">
       <article className=" container flex flex-col items-center pt-4 z-10">
-        <div className="flex justify-center flex-wrap gap-1 text-4xl font-bold text-center">
-          <h1>Olá, meu nome é</h1>
-          <h2 className="whitespace-nowrap">Pedro Virgilio</h2>
+        <div className="flex justify-center flex-wrap gap-1 text-3xl font-bold text-center">
+          <h1 className="">Olá, meu nome é</h1>
+          <h2 className="whitespace-nowrap ">Pedro Virgilio</h2>
         </div>
-        <div className="flex justify-center flex-wrap gap-1 text-2xl font-medium text-center">
+        <div className="flex justify-center flex-wrap gap-1 text-xl font-medium text-center">
           <h2>Desenvolvedor</h2>
           <h2 className="whitespace-nowrap">Front-End</h2>
         </div>
@@ -35,15 +34,13 @@ export function IntroductionSection() {
         <Icons />
       </article>
 
-      <div className="absolute bottom-0 w-full flex justify-center mt-5">
+      <div className="absolute bottom-0 z-0 right-0 nm:right-1/2 nm:translate-x-1/2">
         <Image
+          isBlurred
           alt="Pedro Virgilio"
-          className="rounded-lg"
-          objectFit="cover"
-          objectPosition="center"
+          className="w-auto h-auto rounded-lg object-cover"
+          disableSkeleton={true}
           src="/me.png"
-          width={400}
-          height={400}
         />
       </div>
     </section>
