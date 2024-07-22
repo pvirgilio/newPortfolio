@@ -35,7 +35,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className={clsx(" bg-[#13131F] antialiased", manrope.className)}>
+      <body
+        className={clsx(
+          "w-full h-full bg-[#13131F] antialiased",
+          manrope.className
+        )}
+      >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <header>
             <Navbar />
