@@ -6,9 +6,8 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans, manrope } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-
+import Nav from "@/components/navbar";
+import { manrope } from "@/config/fonts";
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -37,14 +36,13 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "w-full h-full bg-[#13131F] antialiased",
+          "w-full h-full bg-background antialiased scroll-smooth",
           manrope.className
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <header>
-            <Navbar />
-          </header>
+          <Nav />
+
           <main className="w-full h-full">{children}</main>
           {/* <footer className="w-full flex items-center justify-center py-3"></footer> */}
         </Providers>

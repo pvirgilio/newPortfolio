@@ -25,6 +25,14 @@ module.exports = {
       },
     },
     extend: {
+      minHeight: {
+        "mobile-menu": "calc(var(--vh,1vh)*92)",
+        "mobile-nav": "calc(var(--vh,1vh)*100)",
+      },
+      height: {
+        "mobile-menu": "calc(var(--vh,1vh)*92)",
+        "mobile-nav": "calc(var(--vh,1vh)*100)",
+      },
       screens: {
         mn: "320px",
         nm: "480px",

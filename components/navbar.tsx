@@ -1,125 +1,111 @@
+"use client";
+import React from "react";
 import {
-  Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
+  Navbar,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
-import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
-
+  Link,
+  Button,
+  Image,
+} from "@nextui-org/react";
+import { InstagramIcon, LinkedinIcon } from "lucide-react";
+import { GithubIcon } from "./icons";
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  Logo,
-} from "@/components/icons";
+import { usePathname } from "next/navigation";
 
-export const Navbar = () => {
-  // const searchInput = (
-  //   <Input
-  //     aria-label="Search"
-  //     classNames={{
-  //       inputWrapper: "bg-default-100",
-  //       input: "text-sm",
-  //     }}
-  //     endContent={
-  //       <Kbd className="hidden lg:inline-block" keys={["command"]}>
-  //         K
-  //       </Kbd>
-  //     }
-  //     labelPlacement="outside"
-  //     placeholder="Search..."
-  //     startContent={
-  //       <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-  //     }
-  //     type="search"
-  //   />
-  // );
+export default function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const path = usePathname();
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <NextUINavbar className="bg-[#13131F]" maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <span>LOGO</span>
-          </NextLink>
+    <Navbar
+      className="container "
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent>
+        <NavbarMenuToggle
+          className="sm:hidden"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+
+        <NavbarBrand>
+          <div className="hover:scale-105 transition-all">
+            <Image
+              isBlurred
+              alt="Pedro Virgilio"
+              className=" rounded-lg object-cover "
+              disableSkeleton={true}
+              src="/logo2.svg"
+              width={180}
+            />
+          </div>
         </NavbarBrand>
       </NavbarContent>
-      <ul className="hidden lg:flex gap-4 justify-center ml-2">
-        {siteConfig.navItems.map((item) => (
-          <NavbarItem key={item.href}>
-            <NextLink
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary data-[active=true]:font-medium"
-              )}
-              color="foreground"
-              href={item.href}
-            >
-              {item.label}
-            </NextLink>
-          </NavbarItem>
-        ))}
-      </ul>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem isActive={path === "/"}>
+          <Link color="foreground" href="/">
+            Home
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive={path === "/about"}>
+          <Link color="foreground" href="/about">
+            Sobre mim
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive={path === "/projects"}>
+          <Link color="foreground" href="/projects">
+            Projetos
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Contato
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
           <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
+            <LinkedinIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
+          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
+            <InstagramIcon className="text-default-500" />
+          </Link>
+          {/* <ThemeSwitch /> */}
         </NavbarItem>
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
+        {siteConfig.navItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color="foreground"
+              className="w-full"
+              href={item.href}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
-    </NextUINavbar>
+    </Navbar>
   );
-};
+}
