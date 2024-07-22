@@ -7,7 +7,7 @@ import { Image, Link } from "@nextui-org/react";
 
 export function IntroductionSection() {
   return (
-    <section className="relative w-full bg-gradient-to-r min-h-[95vh] from-[#AD2B49] to-transparent flex flex-col items-center">
+    <section className="relative w-full bg-gradient-to-r min-h-[93vh] from-[#AD2B49] to-transparent flex flex-col items-center">
       <article className=" container flex flex-col items-center pt-4 z-10">
         <div className="flex justify-center flex-wrap gap-1 text-3xl font-bold text-center">
           <h1 className="">Olá, meu nome é</h1>
