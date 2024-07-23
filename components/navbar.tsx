@@ -29,12 +29,13 @@ export default function Nav() {
     <Navbar
       className="container "
       isMenuOpen={isMenuOpen}
+      position="static"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent>
         <NavbarMenuToggle
-          className="sm:hidden"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
         />
 
         <NavbarBrand>
@@ -53,22 +54,28 @@ export default function Nav() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive={path === "/"}>
-          <Link color="foreground" href="/">
+          <Link color={path === "/" ? "danger" : "foreground"} href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive={path === "/about"}>
-          <Link color="foreground" href="/about">
+          <Link
+            color={path === "/about" ? "danger" : "foreground"}
+            href="/about"
+          >
             Sobre mim
           </Link>
         </NavbarItem>
         <NavbarItem isActive={path === "/projects"}>
-          <Link color="foreground" href="/projects">
+          <Link
+            color={path === "/projects" ? "danger" : "foreground"}
+            href="/projects"
+          >
             Projetos
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color={path === "/contact" ? "danger" : "foreground"} href="#">
             Contato
           </Link>
         </NavbarItem>
@@ -96,8 +103,8 @@ export default function Nav() {
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color="foreground"
               className="w-full"
+              color="foreground"
               href={item.href}
               size="lg"
             >
