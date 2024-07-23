@@ -1,8 +1,7 @@
 "use client";
 import { Button } from "@nextui-org/button";
 import Icons from "./icons";
-import Image from "next/image"; // Usando next/image para otimização
-import { Link } from "@nextui-org/react";
+import { Image, Link } from "@nextui-org/react";
 import { memo } from "react";
 
 const IntroductionSection = () => {
@@ -38,21 +37,20 @@ const IntroductionSection = () => {
         <Image
           alt="Pedro Virgilio"
           className="w-full h-full rounded-lg object-cover"
+          disableSkeleton
           src="/me.png"
           width={450}
-          height={650}
-          quality={75}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="absolute -bottom-64 sm:top-0 sm:-right-0 z-0">
         <Image
           alt="Pedro Virgilio"
           className="rounded-lg object-cover sm:w-[1200px] sm:h-[1200px]"
+          disableSkeleton
           src="/Ellipse 1.png"
-          width={1200}
-          height={1200}
-          quality={75}
+          width={850}
+          height={850}
           loading="lazy"
         />
       </div>
@@ -60,10 +58,10 @@ const IntroductionSection = () => {
         <Image
           alt="Pedro Virgilio"
           className="rounded-lg object-cover 2xl:w-[1200px] 2xl:h-[1200px]"
+          disableSkeleton
           src="/Ellipse 2.png"
-          width={1200}
-          height={1200}
-          quality={75}
+          width={850}
+          height={850}
           loading="lazy"
         />
       </div>
