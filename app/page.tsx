@@ -1,5 +1,5 @@
 import AboutMeSection from "@/components/Home/AboutMeSection";
-import { IntroductionSection } from "@/components/Home/IntroductionSection";
+import IntroductionSection from "@/components/Home/IntroductionSection";
 
 export default function Home() {
   return (

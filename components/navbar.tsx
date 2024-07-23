@@ -39,7 +39,7 @@ export default function Nav() {
         />
 
         <NavbarBrand>
-          <div className="hover:scale-105 transition-all">
+          <Link href="/" className="hover:scale-105 transition-all">
             <Image
               isBlurred
               alt="Pedro Virgilio"
@@ -48,34 +48,23 @@ export default function Nav() {
               src="/logo2.svg"
               width={180}
             />
-          </div>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={path === "/"}>
-          <Link color={path === "/" ? "danger" : "foreground"} href="/">
-            Home
+        <NavbarItem>
+          <Link color="foreground" href="#about-me">
+            Sobre
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={path === "/about"}>
-          <Link
-            color={path === "/about" ? "danger" : "foreground"}
-            href="/about"
-          >
-            Sobre mim
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={path === "/projects"}>
-          <Link
-            color={path === "/projects" ? "danger" : "foreground"}
-            href="/projects"
-          >
+        <NavbarItem>
+          <Link color="foreground" href="#projects">
             Projetos
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color={path === "/contact" ? "danger" : "foreground"} href="#">
+          <Link color="foreground" href="#contact">
             Contato
           </Link>
         </NavbarItem>
