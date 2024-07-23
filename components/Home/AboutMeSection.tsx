@@ -10,7 +10,7 @@ export default function AboutMeSection() {
       className="container min-h-mobile-nav py-5 px-4  lg:flex lg:items-center lg:py-0"
     >
       <article className="w-full h-full flex flex-col gap-2">
-        <article className=" flex flex-col items-center lg:flex-row gap-6 lg:items-start ">
+        <article className=" flex flex-col items-center lg:flex-row gap-6 lg:items-start  ">
           <article className="bg-gradient-to-r from-transparent to-[#AD2B49] lg:from-[#AD2B49] via-[#3e0f1a] lg:to-transparent flex-shrink-0 rounded-bl-[30%] rounded-tr-[30%] overflow-hidden shadow-lg shadow-[#3e0f1a]">
             <Image
               isBlurred
@@ -19,7 +19,7 @@ export default function AboutMeSection() {
               src="/meImg.png"
             />
           </article>
-          <article className=" text-gray-300 text-md md:text-lg  leading-relaxed flex flex-col items-center text-center gap-2 lg:items-start lg:text-start">
+          <article className=" text-gray-300 text-md md:text-lg  leading-relaxed flex flex-col items-center text-center gap-2 lg:items-start lg:text-start  ">
             <h2 className="text-lg xl:text-xl uppercase border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0 mb-3 w-fit  ">
               Sobre mim
             </h2>
