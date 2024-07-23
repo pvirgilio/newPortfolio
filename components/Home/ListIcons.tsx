@@ -12,7 +12,7 @@ import PostgreSql from "../Icons/PostgreSql";
 
 export default function ListIcons() {
   return (
-    <ul className="max-w-md mt-2 flex flex-wrap items-center justify-center gap-4">
+    <ul className="max-w-md mx-auto mt-2 lg:max-w-full lg:mx-0 flex flex-wrap items-center justify-center gap-4">
       <li className="flex flex-col items-center gap-2">
         <Chip color="default" size="sm">
           Html
