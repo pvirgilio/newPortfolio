@@ -1,3 +1,4 @@
+"use client";
 import { Chip, Image } from "@nextui-org/react";
 import React from "react";
 import ReactIcon from "../Icons/ReactIcon";
@@ -9,64 +10,38 @@ import { NodeIcon } from "../Icons/NodeIcon";
 import TailwindIcon from "../Icons/TailwindIcon";
 import PrismaIcon from "../Icons/PrismaIcon";
 import PostgreSql from "../Icons/PostgreSql";
+import { MysqlIcon } from "../Icons/mysqlIcon";
+import { CircularSkills } from "./SkillSection/CircularProgress";
 
 export default function ListIcons() {
   return (
-    <ul className="max-w-md mx-auto mt-2 lg:max-w-full lg:mx-0 flex flex-wrap items-center justify-center gap-4">
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          Html
+    <div className=" w-full h-full mt-10 flex flex-col lg:flex-row lg:items-start lg:justify-evenly gap-10">
+      <div className="flex flex-col  items-center justify-center gap-5">
+        <Chip color="default" size="md">
+          Front-End
         </Chip>
-        <HtmlIcon className="w-10 h-10 text-orange-600" />
-      </li>
-      <li className="flex flex-col items-center  gap-2">
-        <Chip color="default" size="sm">
-          Css
+        <div className="grid grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 gap-x-3 gap-y-5">
+          <CircularSkills label="Html5" value={80} />
+          <CircularSkills label="Css3" value={80} />
+          <CircularSkills label="JavaScript" value={70} />
+          <CircularSkills label="React" value={50} />
+          <CircularSkills label="Nextjs" value={50} />
+          <CircularSkills label="Tailwindcss" value={50} />
+          <CircularSkills label="Figma" value={30} />
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-5">
+        <Chip color="default" size="md">
+          Back-End
         </Chip>
-        <CssIcon className="w-10 h-10 text-blue-500" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          JavaScript
-        </Chip>
-        <JsIcon className="w-10 h-10 text-yellow-500" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          React
-        </Chip>
-        <ReactIcon className="w-10 h-10 text-blue-400" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          Nextjs
-        </Chip>
-        <NextIcon className=" w-10 h-10" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          Tailwind
-        </Chip>
-        <TailwindIcon className=" w-10 h-10 text-blue-400" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          Node
-        </Chip>
-        <NodeIcon className=" w-10 h-10" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          Prisma
-        </Chip>
-        <PrismaIcon className=" w-10 h-10" />
-      </li>
-      <li className="flex flex-col items-center gap-2">
-        <Chip color="default" size="sm">
-          PostgreSQL
-        </Chip>
-        <PostgreSql className=" w-10 h-10" />
-      </li>
-    </ul>
+        <div className="grid grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 gap-x-3 gap-y-5">
+          <CircularSkills label="NodeJs" value={30} />
+          <CircularSkills label="Express" value={30} />
+          <CircularSkills label="Prisma" value={20} />
+          <CircularSkills label="Mysql" value={20} />
+          <CircularSkills label="PostgreSql" value={20} />
+        </div>
+      </div>
+    </div>
   );
 }

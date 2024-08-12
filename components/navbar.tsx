@@ -27,12 +27,12 @@ export default function Nav() {
 
   return (
     <Navbar
-      className="container "
+      className=" container   w-full lg:px-0  "
       isMenuOpen={isMenuOpen}
       position="static"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent>
+      <NavbarContent className="">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"

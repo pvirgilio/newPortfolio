@@ -32,18 +32,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="pt-br">
       <head />
       <body
         className={clsx(
-          "w-full h-full bg-background antialiased scroll-smooth",
+          "w-full h-full antialiased scroll-smooth",
           manrope.className
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <Nav />
 
-          <main className="w-full h-full">{children}</main>
+          <main className="w-full h-full ">{children}</main>
           {/* <footer className="w-full flex items-center justify-center py-3"></footer> */}
         </Providers>
       </body>

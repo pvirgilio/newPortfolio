@@ -24,7 +24,11 @@ module.exports = {
         "2xl": "1436px",
       },
     },
+
     extend: {
+      backgroundImage: {
+        "gradient-a": "url('/gradientbg.jpg')",
+      },
       minHeight: {
         "mobile-menu": "92dvh",
         "mobile-nav": "100dvh",
