@@ -1,5 +1,5 @@
 "use client";
-import { Image } from "@nextui-org/react";
+import { Divider, Image } from "@nextui-org/react";
 import React from "react";
 import ListIcons from "./ListIcons";
 import Icons from "./icons";
@@ -21,9 +21,10 @@ export default function AboutMeSection() {
           <article className="xl:h-[500px] xl:justify-start  flex flex-col items-center text-center gap-2 lg:items-start lg:text-start  ">
             <div className="flex flex-col  ">
               <PrefixSection text="../about" classe="hidden lg:block " />
-              <h2 className="hidden lg:block text-white text-xl lg:text-[22px] xl:text-2xl uppercase border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0 mb-3 w-fit  ">
+              <h2 className="hidden lg:block text-white text-xl lg:text-[22px] xl:text-2xl uppercase font-bold mx-auto lg:mx-0  w-fit  ">
                 Sobre mim
               </h2>
+              <Divider className="my-2" />
               <p className="text-[17px] lg:text-large text-gray-300 xl:text-lg leading-[1.78]">
                 Olá, meu nome é Pedro, tenho 22 anos. Sou um recém formado em
                 Ciência da Computação e sou especializado em desenvolvimento

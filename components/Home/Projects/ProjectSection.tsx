@@ -15,12 +15,32 @@ export default function ProjectSection() {
         <Divider className="my-4 " />
       </div>
       <article className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-y-5 justify-items-center items-center">
-        <CardProject />
-        <CardProject />
-        <CardProject />
-        <CardProject />
-        <CardProject />
-        <CardProject />
+        <CardProject
+          model="Landing page"
+          text="Savant Web site"
+          image="/Home/ProjectSection/savantsitemockup.png"
+        />
+        {/* <CardProject
+          model="Landing page"
+          text="Savant Web store"
+          image="/Home/ProjectSection/store.png"
+        /> */}
+        <CardProject
+          model="Landing page"
+          text="Clínica Odontológica"
+          image="/Home/ProjectSection/odontosite.png"
+        />
+        <CardProject
+          model="Landing page"
+          text="Site Social Media"
+          image="/Home/ProjectSection/linkspagemockup.png"
+        />
+        {/* <CardProject model="Landing page" text="Savant Web" image=""/> */}
+        {/* <CardProject
+          model="Landing page"
+          text="Savant Web"
+          image="/Home/ProjectSection/savantm.png"
+        /> */}
       </article>
       <div className="w-full mt-5 flex justify-center">
         <Link

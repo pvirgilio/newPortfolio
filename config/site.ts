@@ -8,17 +8,10 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "Sobre mim",
-      href: "/about",
-    },
+
     {
       label: "Projetos",
       href: "/projects",
-    },
-    {
-      label: "Contato",
-      href: "/contact-me",
     },
   ],
   navMenuItems: [
@@ -26,10 +19,7 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "Sobre mim",
-      href: "/about",
-    },
+
     {
       label: "Projetos",
       href: "/projects",

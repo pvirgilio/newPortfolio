@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import Nav from "@/components/navbar";
 import { manrope } from "@/config/fonts";
+import { FooterComponent } from "@/components/Footer";
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -36,15 +37,14 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "w-full h-full antialiased scroll-smooth",
+          "w-full h-full antialiased scroll-smooth ",
           manrope.className
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class" }}>
           <Nav />
-
-          <main className="w-full h-full ">{children}</main>
-          {/* <footer className="w-full flex items-center justify-center py-3"></footer> */}
+          <main className="w-full min-h-screen flex flex-col">{children}</main>
+          <FooterComponent />
         </Providers>
       </body>
     </html>

@@ -55,17 +55,12 @@ export default function Nav() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#about-me">
-            Sobre
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#projects">
             Projetos
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#contact">
-            Contato
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -88,7 +83,7 @@ export default function Nav() {
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu draggable>
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -96,6 +91,7 @@ export default function Nav() {
               color="foreground"
               href={item.href}
               size="lg"
+              onClick={handleCloseMenu}
             >
               {item.label}
             </Link>

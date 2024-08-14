@@ -15,7 +15,7 @@ import { CircularSkills } from "./SkillSection/CircularProgress";
 
 export default function ListIcons() {
   return (
-    <div className=" w-full h-full mt-10 flex flex-col lg:flex-row lg:items-start lg:justify-evenly gap-10">
+    <div className=" w-full h-full mt-10  flex flex-col lg:flex-row lg:items-start lg:justify-evenly gap-10">
       <div className="flex flex-col  items-center justify-center gap-5">
         <Chip color="default" size="md">
           Front-End
