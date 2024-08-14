@@ -37,13 +37,15 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "w-full h-full antialiased scroll-smooth ",
+          "w-full h-full bg-[#00091b]  scroll-smooth ",
           manrope.className
         )}
       >
         <Providers themeProps={{ attribute: "class" }}>
           <Nav />
-          <main className="w-full min-h-screen flex flex-col">{children}</main>
+          <main className="w-full min-h-screen bg-[#00091b] flex flex-col">
+            {children}
+          </main>
           <FooterComponent />
         </Providers>
       </body>

@@ -1,22 +1,47 @@
-import { Card } from "@nextui-org/react";
+"use client";
+import { Button, Card, Divider } from "@nextui-org/react";
 import React from "react";
 import "react-loading-skeleton/dist/skeleton.css";
 import CarouselServices from "./CarouselServices";
 
 export const ServicesSection = () => {
   return (
-    <section className="bg-white py-16 min-h-mobile-nav">
-      <div className="relative container mx-auto px-4">
-        <h2 className="text-4xl text-gray-700 font-bold text-center mb-12">
-          Meus Serviços
-        </h2>
-        <CarouselServices />
-        <div className="absolute left-[83px] bottom-10 z-10 -bottom-10">
-          <div className="swiper-button-prev after:ml-2.5 after:text-black after:border after:border-black after:p-5 after:rounded-full after:w-5 after:h-5 after:flex after:items-center after:justify-center after:!text-medium   after:transition-all"></div>
-
-          <div className="swiper-button-next after:text-black after:border after:border-black after:p-5 after:rounded-full after:w-5 after:h-5 after:flex after:items-center after:justify-center after:!text-medium after:transition-all "></div>
+    <>
+      <section className=" mt-10">
+        <div className="container mx-auto ">
+          <div className="flex flex-col gap-5">
+            <h2 className="text-3xl lg:text-4xl text-white font-bold text-center ">
+              Meus Serviços
+            </h2>
+            <p className="text-center lg:text-large max-w-xl mx-auto">
+              Aqui estão alguns dos serviços que ofereço. Se você tem uma ideia
+              ou projeto em mente, entre em contato comigo.
+            </p>
+          </div>
+          <Divider className="mt-10" />
+          <CarouselServices />
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="mt-10 w-full bg-s-services bg-cover bg-center lg:bg-top bg-no-repeat opacity-95 h-[400px]">
+        <div className="w-full h-full backdrop-blur-[2px]">
+          <div className="container lg:px-0 max-w-xl mx-auto h-full flex flex-col items-center justify-center text-center gap-5">
+            <h3 className="text-2xl lg:text-3xl text-white font-bold">
+              Eleve sua produtividade. Comece a transformar suas ideias hoje
+              mesmo.
+            </h3>
+            <p className="text-gray-200 text-lg">
+              Vamos juntos criar algo incrível? Entre em contato e descubra como
+              posso ajudar a transformar sua visão em realidade.
+            </p>
+            <Button
+              variant="solid"
+              className="bg-[#AD2B49] text-white font-medium"
+            >
+              Entre em contato
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

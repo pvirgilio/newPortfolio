@@ -15,12 +15,12 @@ import { CircularSkills } from "./SkillSection/CircularProgress";
 
 export default function ListIcons() {
   return (
-    <div className=" w-full h-full mt-10  flex flex-col lg:flex-row lg:items-start lg:justify-evenly gap-10">
-      <div className="flex flex-col  items-center justify-center gap-5">
+    <div className=" w-full h-full mt-10 flex flex-col lg:flex-row items-center justify-center lg:items-start gap-10">
+      <div className="w-full flex flex-col  items-center justify-center gap-5">
         <Chip color="default" size="md">
           Front-End
         </Chip>
-        <div className="grid grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 gap-x-3 gap-y-5">
+        <div className="w-full flex flex-col gap-x-3 gap-y-5">
           <CircularSkills label="Html5" value={80} />
           <CircularSkills label="Css3" value={80} />
           <CircularSkills label="JavaScript" value={70} />
@@ -30,11 +30,11 @@ export default function ListIcons() {
           <CircularSkills label="Figma" value={30} />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-5">
+      <div className="w-full flex flex-col items-center justify-center gap-5">
         <Chip color="default" size="md">
           Back-End
         </Chip>
-        <div className="grid grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 gap-x-3 gap-y-5">
+        <div className="w-full flex flex-col gap-x-3 gap-y-5">
           <CircularSkills label="NodeJs" value={30} />
           <CircularSkills label="Express" value={30} />
           <CircularSkills label="Prisma" value={20} />

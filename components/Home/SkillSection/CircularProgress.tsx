@@ -1,4 +1,4 @@
-import { CircularProgress } from "@nextui-org/react";
+import { CircularProgress, Progress } from "@nextui-org/react";
 import React from "react";
 
 interface CircularSkillsProps {
@@ -8,17 +8,19 @@ interface CircularSkillsProps {
 
 export function CircularSkills(props: CircularSkillsProps) {
   return (
-    <CircularProgress
-      value={props.value}
+    <Progress
       label={props.label}
       classNames={{
-        svg: "w-32 h-32",
+        track: "bg-[#1E1E1E]",
+        base: "w-full ",
         label: "font-medium",
         value: "text-md",
-        indicator: "text-[#AD2B49]",
+        indicator: "bg-[#AD2B49]",
       }}
-      formatOptions={{ style: "percent" }}
+      value={props.value}
+      color="success"
       showValueLabel={true}
+      className=""
     />
   );
 }

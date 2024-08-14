@@ -10,7 +10,7 @@ const IntroductionSection = () => {
       <article className="w-full h-full container flex flex-col items-center pt-4 z-30 sm:justify-center sm:items-start lg:px-0">
         <div className="flex justify-center flex-wrap gap-2 text-3xl font-extrabold text-center lg:text-4xl xl:text-4xl">
           <h1>Olá, meu nome é</h1>
-          <h2 className="whitespace-nowrap ">Pedro Virgilio</h2>
+          <h2 className="whitespace-nowrap  ">Pedro Virgilio</h2>
         </div>
         <div className="mt-2 flex justify-center flex-wrap gap-1 text-xl font-medium text-center lg:text-2xl xl:text-2xl">
           <h2>Desenvolvedor</h2>

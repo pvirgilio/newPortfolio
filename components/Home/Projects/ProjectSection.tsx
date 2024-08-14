@@ -6,7 +6,7 @@ import { Divider } from "@nextui-org/react";
 
 export default function ProjectSection() {
   return (
-    <section className="container mt-40 lg:px-0 flex flex-col gap-5 pb-20  ">
+    <section className="container mt-10  lg:px-0 flex flex-col gap-5 mb-10  ">
       <div className="w-full">
         <PrefixSection text="../projects" classe="text-start -mb-10" />
         <h2 className="text-2xl font-bold text-white xl:text-3xl text-start">

@@ -1,24 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { Card, Divider, image } from "@nextui-org/react";
+import Image from "next/image";
+
 import {
   Bolt,
   BookType,
   Layers3,
   LockKeyhole,
+  MonitorCog,
   PanelsTopLeft,
 } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import { Card, image } from "@nextui-org/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Image from "next/image";
-
 const services = [
   {
     image: "/Home/ServicesSection/responsiveDesign.png",
@@ -51,57 +47,31 @@ const services = [
     description:
       "Criação de designs atraentes e funcionais, incluindo prototipagem rápida para validação de ideias antes da implementação final.",
   },
+  {
+    icon: <MonitorCog color="#AD2B49" size={40} />,
+    title: "Linguagens Modernas",
+    description:
+      "Contrução de sites com as tecnologias web mais recentes e otimizadas, como nextjs. Garantindo que seu projeto esteja sempre atualizado e pronto para o futuro.",
+  },
 ];
 
-export default function CarouselServices() {
+export default function CardServices() {
   const renderCard = (service: any, index: any) => (
-    <SwiperSlide key={index}>
-      <Card className="bg-transparent w-full h-[630px]  p-6 rounded-lg shadow-lg text-start">
-        <div className="text-5xl  mb-4">{service.icon}</div>
-        <h2 className="text-2xl text-black font-bold mb-4">{service.title}</h2>
-        <p className="text-gray-600 text-[17px] mb-4 w-full leading-relaxed">
-          {service.description}
-        </p>
-        <Image
-          src={service.image}
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
-      </Card>
-    </SwiperSlide>
+    <Card
+      key={index}
+      className="bg-gray-900 border border-gray-800 rounded-xl max-w-lg h-full  p-6  shadow-lg flex flex-col items-center justify-start text-center hover:scale-105 hover:transition-transform duration-500"
+    >
+      <div className="text-5xl  mb-4">{service.icon}</div>
+      <h2 className="text-2xl text-white font-bold mb-4">{service.title}</h2>
+      <p className="text-white text-[17px] mb-4 w-full leading-relaxed">
+        {service.description}
+      </p>
+    </Card>
   );
 
-  //   const renderSkeleton = (index: any) => (
-  //     <SwiperSlide key={index}>
-  //       <Card className="bg-[#202127] w-[400px] h-[300px] p-6 rounded-lg shadow-lg text-start">
-  //         <div className="text-5xl mb-4">
-  //           <Skeleton circle={true} height={40} width={40} />
-  //         </div>
-  //         <h3 className="text-2xl font-semibold mb-4">
-  //           <Skeleton width={200} />
-  //         </h3>
-  //         <p className="text-gray-200 mb-4">
-  //           <Skeleton count={3} />
-  //         </p>
-  //       </Card>
-  //     </SwiperSlide>
-  //   );
-
   return (
-    <Swiper
-      className=" rounded-lg shadow-lg"
-      spaceBetween={30}
-      slidesPerView={1}
-      modules={[Navigation, Pagination]}
-      autoplay={{ delay: 3000 }}
-      loop={true}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      }}
-    >
+    <div className="grid grid-cols-1 nm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
       {services.map((service, index) => renderCard(service, index))}
-    </Swiper>
+    </div>
   );
 }

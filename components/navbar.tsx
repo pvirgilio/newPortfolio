@@ -11,6 +11,7 @@ import {
   Link,
   Button,
   Image,
+  Divider,
 } from "@nextui-org/react";
 import { InstagramIcon, LinkedinIcon } from "lucide-react";
 import { GithubIcon } from "./icons";
@@ -19,7 +20,7 @@ import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+  const [mobileMenu, setMobileMenu] = React.useState(false);
   const path = usePathname();
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
@@ -27,7 +28,7 @@ export default function Nav() {
 
   return (
     <Navbar
-      className=" container   w-full lg:px-0  "
+      className=" container bg-[#00091b]  w-full lg:px-0   "
       isMenuOpen={isMenuOpen}
       position="static"
       onMenuOpenChange={setIsMenuOpen}
@@ -54,12 +55,12 @@ export default function Nav() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#about-me">
+          <Link color="foreground" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#projects">
+          <Link color="foreground" href="/projects">
             Projetos
           </Link>
         </NavbarItem>
@@ -69,13 +70,21 @@ export default function Nav() {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
+          <Link
+            isExternal
+            aria-label="Linkedin"
+            href={siteConfig.links.linkedin}
+          >
             <LinkedinIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
+          <Link
+            isExternal
+            aria-label="Twitter"
+            href={siteConfig.links.instagram}
+          >
             <InstagramIcon className="text-default-500" />
           </Link>
           {/* <ThemeSwitch /> */}
@@ -97,6 +106,25 @@ export default function Nav() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem className="flex items-center gap-2 ">
+          <Link
+            isExternal
+            aria-label="Linkedin"
+            href={siteConfig.links.linkedin}
+          >
+            <LinkedinIcon className="text-default-500 w-7 h-7" />
+          </Link>
+          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+            <GithubIcon className="text-default-500 w-7 h-7" />
+          </Link>
+          <Link
+            isExternal
+            aria-label="Twitter"
+            href={siteConfig.links.instagram}
+          >
+            <InstagramIcon className="text-default-500 w-7 h-7" />
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

@@ -28,6 +28,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-a": "url('/gradientbg.jpg')",
+        "s-services": "url('/home/ServicesSection/imgServiceSection.jpg')",
+        "a-services": "url('/home/ProjectSection/imgServiceSection.jpg')",
       },
       minHeight: {
         "mobile-menu": "92dvh",

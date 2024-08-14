@@ -10,7 +10,7 @@ import { Image } from "@nextui-org/react";
 
 export function FooterComponent() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-[#070707]">
       <div className="container mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
