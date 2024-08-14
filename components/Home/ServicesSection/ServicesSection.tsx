@@ -22,7 +22,15 @@ export const ServicesSection = () => {
           <CarouselServices />
         </div>
       </section>
-      <section className="mt-10 w-full bg-s-services bg-cover bg-center lg:bg-top bg-no-repeat opacity-95 h-[400px]">
+      <section
+        style={{
+          backgroundImage: "url('/Home/ServicesSection/imgServiceSection.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="mt-10 w-full lg:bg-top bg-no-repeat opacity-95 h-[400px]"
+      >
         <div className="w-full h-full backdrop-blur-[2px]">
           <div className="container lg:px-0 max-w-xl mx-auto h-full flex flex-col items-center justify-center text-center gap-5">
             <h3 className="text-2xl lg:text-3xl text-white font-bold">
