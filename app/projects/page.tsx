@@ -1,9 +1,16 @@
+import { CardsProjectSection } from "@/components/Home/Projects/CardProject";
 import { title } from "@/components/primitives";
-
+import clsx from "clsx";
+import { motion } from "framer-motion";
 export default function DocsPage() {
   return (
-    <div>
-      <h1 className={title()}>Docs</h1>
-    </div>
+    <section className="w-full h-full my-20">
+      <div className="w-full container lg:px-0 ">
+        <div className="w-full flex justify-center">
+          <h1 className={clsx(title(), "")}>Meus Projetos</h1>
+        </div>
+        <CardsProjectSection />
+      </div>
+    </section>
   );
 }

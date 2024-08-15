@@ -4,16 +4,60 @@ import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
 import Image from "next/image";
 import { GithubIcon } from "@/components/icons";
 import { Globe } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
-export default function CardProject({
+const cardData = [
+  {
+    model: "Landing page",
+    text: "Savant Web site",
+    image: "/Home/ProjectSection/savantsitemockup.png",
+    linkGithub: "https://github.com/pvirgilio/savant-newportoflio.git",
+    linkSite: "https://savantweb.com.br/",
+  },
+  {
+    model: "Landing page",
+    text: "Clínica Odontológica",
+    image: "/Home/ProjectSection/odontosite.png",
+    linkGithub: "https://github.com/pvirgilio/bw-odonto2.git",
+    linkSite: "https://odontosite.netlify.app/",
+  },
+  {
+    model: "Landing page",
+    text: "Site Social Media",
+    image: "/Home/ProjectSection/linkspagemockup.png",
+    linkSite: "https://linkspage.netlify.app/",
+    linkGithub: "https://github.com/pvirgilio/linksPage.git",
+  },
+  {
+    model: "Landing page",
+    text: "Sorteador de Rifas",
+    image: "/Home/ProjectSection/imgSorteador.png",
+    linkSite: "https://sorteador-five-alpha.vercel.app/",
+    linkGithub: "https://github.com/pvirgilio/sorteador.git",
+  },
+  {
+    model: "Landing page",
+    text: "Meu Portfólio",
+    image: "/Home/ProjectSection/imgPortfolio.png",
+    linkSite: "https://pedrovirgilio.vercel.app/",
+    linkGithub: "https://github.com/pvirgilio/newPortfolio",
+  },
+];
+
+const CardProject = ({
   model,
   text,
   image,
+  linkGithub,
+  linkSite,
 }: {
   model: string;
   text: string;
   image: string;
-}) {
+  linkGithub: string;
+  linkSite: string;
+}) => {
   return (
     <Card
       isFooterBlurred
@@ -33,22 +77,46 @@ export default function CardProject({
       />
       <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
         <div className="flex flex-grow gap-2 items-center ">
-          <Button
-            variant="ghost"
-            className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
-          >
-            <GithubIcon />
-            Github
-          </Button>
-          <Button
-            variant="ghost"
-            className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
-          >
-            <Globe />
-            Website
-          </Button>
+          <Link target="_blank" href={linkGithub}>
+            <Button
+              variant="ghost"
+              className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
+            >
+              <GithubIcon />
+              Github
+            </Button>
+          </Link>
+          <Link target="_blank" href={linkSite}>
+            <Button
+              variant="ghost"
+              className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
+            >
+              <Globe />
+              Website
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>
+  );
+};
+
+export function CardsProjectSection() {
+  const path = usePathname();
+  const displayProjects =
+    path === "/projects" ? cardData : cardData.slice(0, 3);
+  return (
+    <article className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
+      {displayProjects.map((card, index) => (
+        <CardProject
+          key={index}
+          model={card.model}
+          text={card.text}
+          image={card.image}
+          linkGithub={card.linkGithub}
+          linkSite={card.linkSite}
+        />
+      ))}
+    </article>
   );
 }

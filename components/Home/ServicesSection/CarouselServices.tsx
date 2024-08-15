@@ -15,6 +15,7 @@ import {
   MonitorCog,
   PanelsTopLeft,
 } from "lucide-react";
+
 const services = [
   {
     image: "/Home/ServicesSection/responsiveDesign.png",
@@ -59,9 +60,9 @@ export default function CardServices() {
   const renderCard = (service: any, index: any) => (
     <Card
       key={index}
-      className="bg-gray-900 border border-gray-800 rounded-xl max-w-lg h-full  p-6  shadow-lg flex flex-col items-center justify-start text-center hover:scale-105 hover:transition-transform duration-500"
+      className="bg-gray-900 border border-gray-800 rounded-xl max-w-lg h-full p-6 shadow-lg flex flex-col items-center justify-start text-center !transition-transform duration-500 hover:scale-105"
     >
-      <div className="text-5xl  mb-4">{service.icon}</div>
+      <div className="text-5xl mb-4">{service.icon}</div>
       <h2 className="text-2xl text-white font-bold mb-4">{service.title}</h2>
       <p className="text-white text-[17px] mb-4 w-full leading-relaxed">
         {service.description}
@@ -70,7 +71,7 @@ export default function CardServices() {
   );
 
   return (
-    <div className="grid grid-cols-1 nm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
+    <div className="grid grid-cols-1 nm:grid-cols-2 md:grid-cols-3 gap-5 mt-10">
       {services.map((service, index) => renderCard(service, index))}
     </div>
   );

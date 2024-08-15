@@ -95,8 +95,8 @@ export default function ContactSection() {
             <input
               type="hidden"
               name="redirectTo"
-              value="http://127.0.0.1/projects"
-            ></input>
+              value="https://pedrovirgilio.vercel.app/thanks"
+            />
             <input type="text" name="honeypot" className="hidden"></input>
             <Button variant="ghost" type="submit">
               Enviar
