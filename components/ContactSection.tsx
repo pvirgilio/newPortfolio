@@ -87,14 +87,14 @@ export default function ContactSection() {
                 className="w-full "
               />
             </div>
-            <input type="text" name="honeypot" className="hidden"></input>
             <Button variant="ghost" type="submit">
               Enviar
             </Button>
+            <input type="text" name="honeypot" className="hidden"></input>
             <input
               type="hidden"
               name="accessKey"
-              value={process.env.STATIC_FORMS_ACCESS_KEY}
+              value={process.env.NEXT_PUBLIC_STATIC_FORM_ACCESS_KEY}
             />
             <input
               type="hidden"
