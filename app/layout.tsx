@@ -35,12 +35,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="pt-br">
       <head />
-      <body
-        className={clsx(
-          "w-full h-full bg-[#00091b]  scroll-smooth ",
-          manrope.className
-        )}
-      >
+      <body className={clsx("w-full h-full bg-[#00091b]  ", manrope.className)}>
         <Providers themeProps={{ attribute: "class" }}>
           <Nav />
           <main className="w-full min-h-screen bg-[#00091b] flex flex-col">

@@ -6,7 +6,7 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section className="w-full  bg-gray-950 py-20 ">
+    <section id="contact" className="w-full  bg-gray-950 py-20 ">
       <div className="container lg:px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-5  ">
           <h2 className="text-4xl font-bold text-white xl:text-6xlt">
@@ -29,11 +29,6 @@ export default function ContactSection() {
             method="post"
             className="w-full flex flex-col gap-2 "
           >
-            <input
-              type="hidden"
-              name="accessKey"
-              value={process.env.STATIC_FORMS_ACCESS_KEY}
-            ></input>
             <div className="w-full flex flex-col gap-2">
               <Input
                 isRequired
@@ -92,15 +87,20 @@ export default function ContactSection() {
                 className="w-full "
               />
             </div>
+            <input type="text" name="honeypot" className="hidden"></input>
+            <Button variant="ghost" type="submit">
+              Enviar
+            </Button>
+            <input
+              type="hidden"
+              name="accessKey"
+              value={process.env.STATIC_FORMS_ACCESS_KEY}
+            />
             <input
               type="hidden"
               name="redirectTo"
               value="https://pedrovirgilio.vercel.app/thanks"
             />
-            <input type="text" name="honeypot" className="hidden"></input>
-            <Button variant="ghost" type="submit">
-              Enviar
-            </Button>
           </form>
         </div>
       </div>

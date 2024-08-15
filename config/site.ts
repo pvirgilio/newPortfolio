@@ -13,6 +13,10 @@ export const siteConfig = {
       label: "Projetos",
       href: "/projects",
     },
+    {
+      label: "Contato",
+      href: "/#contact",
+    },
   ],
   navMenuItems: [
     {
