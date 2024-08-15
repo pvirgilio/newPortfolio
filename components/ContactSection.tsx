@@ -94,7 +94,7 @@ export default function ContactSection() {
             <input
               type="hidden"
               name="accessKey"
-              value={process.env.NEXT_PUBLIC_STATIC_FORM_ACCESS_KEY}
+              value={process.env.STATIC_ACCESS_KEY}
             />
             <input
               type="hidden"

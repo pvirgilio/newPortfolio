@@ -22,7 +22,7 @@ export default function ListIcons() {
         </Chip>
         <div className="w-full flex flex-col gap-x-3 gap-y-5">
           <CircularSkills label="Html5" value={80} />
-          <CircularSkills label="Css3" value={80} />
+          <CircularSkills label="Css3" value={70} />
           <CircularSkills label="JavaScript" value={70} />
           <CircularSkills label="React" value={50} />
           <CircularSkills label="Nextjs" value={50} />
