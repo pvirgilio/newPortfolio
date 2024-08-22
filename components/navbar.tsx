@@ -28,7 +28,7 @@ export default function Nav() {
 
   return (
     <Navbar
-      className=" container bg-[#00091b]  w-full lg:px-0   "
+      className=" container bg-black  w-full lg:px-0   "
       isMenuOpen={isMenuOpen}
       position="static"
       onMenuOpenChange={setIsMenuOpen}

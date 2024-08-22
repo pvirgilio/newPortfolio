@@ -6,7 +6,7 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-full  bg-gray-950 py-20 ">
+    <section id="contact" className="w-full  bg-black py-20 ">
       <div className="container lg:px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-5  ">
           <h2 className="text-4xl font-bold text-white xl:text-6xlt">

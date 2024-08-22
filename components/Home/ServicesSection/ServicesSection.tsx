@@ -3,6 +3,7 @@ import { Button, Card, Divider } from "@nextui-org/react";
 import React from "react";
 import "react-loading-skeleton/dist/skeleton.css";
 import CarouselServices from "./CarouselServices";
+import Link from "next/link";
 
 export const ServicesSection = () => {
   return (
@@ -43,6 +44,8 @@ export const ServicesSection = () => {
             </p>
             <Button
               variant="solid"
+              as={Link}
+              href="/#contact"
               className="bg-[#AD2B49] text-white font-medium"
             >
               Entre em contato
