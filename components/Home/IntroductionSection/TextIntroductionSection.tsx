@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import React from "react";
 import { motion } from "framer-motion";
@@ -23,17 +22,22 @@ export function TextIntroductionSection() {
         web modernas.
       </p>
 
-      <div>
-        <Button
-          showAnchorIcon
-          as={Link}
-          className="p-4 mt-5 bg-white text-black font-semibold text-large  lg:text-xl"
-          href="/about"
-          variant="solid"
-        >
-          Entre em contato
-        </Button>
-      </div>
+      <Link
+        href="/docs/CurrículoPedroVirgilio.pdf"
+        className="radio-wrapper !mt-5"
+      >
+        <input className="input" name="btn" id="value-3" type="radio" />
+        <div className="btn">
+          Currículo
+          <span aria-hidden="true" />
+          <span className="btn__glitch" aria-hidden="true">
+            Contato_
+          </span>
+          <label className="number" htmlFor="value-3">
+            r3
+          </label>
+        </div>
+      </Link>
     </article>
   );
 }

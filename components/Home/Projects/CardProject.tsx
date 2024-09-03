@@ -108,7 +108,7 @@ export function CardsProjectSection() {
   const displayProjects =
     path === "/projects" ? cardData : cardData.slice(0, 3);
   return (
-    <article className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
+    <article className="grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
       {displayProjects.map((card, index) => (
         <CardProject
           key={index}

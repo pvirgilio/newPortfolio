@@ -9,7 +9,7 @@ import PrefixSection from "../PrefixSection";
 export const ServicesSection = () => {
   return (
     <>
-      <section className="bg-[#111111] py-20">
+      <section className="bg-[#070707] py-20">
         <div className="container mx-auto lg:px-0 ">
           <div className="flex flex-col items-center justify-center">
             <PrefixSection text="../services" />

@@ -6,24 +6,26 @@ import { Divider } from "@nextui-org/react";
 
 export default function ProjectSection() {
   return (
-    <section className="container  lg:px-0 flex flex-col gap-5 py-20   ">
-      <div className="w-full">
-        <PrefixSection text="../projects" classe="text-start -mb-10" />
-        <h2 className="text-2xl font-bold text-white xl:text-3xl text-start">
-          Principais Projetos
-        </h2>
-        <Divider className="my-4 " />
-      </div>
-      <CardsProjectSection />
-      <div className="w-full mt-5 flex justify-center">
-        <Link
-          className="w-fit   font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
-          href={"/projects"}
-        >
-          <span className="inline-block text-xl lg:text-2xl">
-            Ver mais projetos
-          </span>
-        </Link>
+    <section className="w-full h-full bg-[#111111]   ">
+      <div className="container lg:px-0 flex flex-col gap-5 py-20   ">
+        <div className="w-full">
+          <PrefixSection text="../projects" classe="text-start -mb-10" />
+          <h2 className="text-2xl font-bold text-white xl:text-3xl text-start">
+            Principais Projetos
+          </h2>
+          <Divider className="my-4 " />
+        </div>
+        <CardsProjectSection />
+        <div className="w-full mt-5 flex justify-center">
+          <Link
+            className="w-fit   font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
+            href={"/projects"}
+          >
+            <span className="inline-block text-xl lg:text-2xl">
+              Ver mais projetos
+            </span>
+          </Link>
+        </div>
       </div>
     </section>
   );
