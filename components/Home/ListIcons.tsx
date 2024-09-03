@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactIcon from "../Icons/ReactIcon";
 import { JsIcon } from "../Icons/JsIcon";
 import CssIcon from "../Icons/CssIcon";
@@ -82,21 +82,12 @@ export default function ListIcons() {
   const [namesLanguages, setNamesLanguages] = React.useState<string | null>(
     null
   );
-  const [isMobile, setIsMobile] = React.useState<boolean>(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth <= 1280);
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth <= 1280);
-    });
-  }, []);
-
   return (
     <div className="w-full flex flex-col gap-20 justify-center items-center lg:flex-row lg:items-start lg:justify-between lg:gap-0 py-5">
-      <p className=" lg:max-w-lg text-xl lg:text-[22px] text-gray-300 flex flex-col items-start">
+      <p className="hidden md:flex lg:max-w-lg text-xl lg:text-[22px] text-gray-300  flex-col items-start">
         <strong>{namesLanguages}</strong>
-        {description || isMobile
-          ? "Clique em um ícone para saber mais sobre ele."
+        {description
+          ? description
           : "*Passe o mouse em cima de cada ícone para saber mais.*"}
       </p>
       <ul className=" grid place-items-center grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 flex-wrap gap-5">

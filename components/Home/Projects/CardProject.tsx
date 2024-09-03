@@ -65,7 +65,9 @@ const CardProject = ({
     >
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">{model}</p>
-        <h4 className="text-white/90 font-medium text-xl">{text}</h4>
+        <h4 className="text-white/90 font-medium text-2xl lg:text-3xl">
+          {text}
+        </h4>
       </CardHeader>
       <Image
         alt="Relaxing app background"
@@ -80,7 +82,7 @@ const CardProject = ({
           <Link target="_blank" href={linkGithub}>
             <Button
               variant="ghost"
-              className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-lg border-gray-300 hover:!bg-[#AD2B49]"
             >
               <GithubIcon />
               Github
@@ -89,7 +91,7 @@ const CardProject = ({
           <Link target="_blank" href={linkSite}>
             <Button
               variant="ghost"
-              className="border-1 border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-lg border-gray-300 hover:!bg-[#AD2B49]"
             >
               <Globe />
               Website
@@ -106,7 +108,7 @@ export function CardsProjectSection() {
   const displayProjects =
     path === "/projects" ? cardData : cardData.slice(0, 3);
   return (
-    <article className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
+    <article className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
       {displayProjects.map((card, index) => (
         <CardProject
           key={index}

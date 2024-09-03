@@ -17,10 +17,12 @@ export default function ProjectSection() {
       <CardsProjectSection />
       <div className="w-full mt-5 flex justify-center">
         <Link
-          className="w-fit my-5 font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
+          className="w-fit   font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
           href={"/projects"}
         >
-          <span className="inline-block">Ver mais projetos</span>
+          <span className="inline-block text-xl lg:text-2xl">
+            Ver mais projetos
+          </span>
         </Link>
       </div>
     </section>

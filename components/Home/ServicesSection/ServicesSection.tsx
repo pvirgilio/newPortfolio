@@ -10,13 +10,13 @@ export const ServicesSection = () => {
   return (
     <>
       <section className="bg-[#111111] py-20">
-        <div className="container mx-auto ">
+        <div className="container mx-auto lg:px-0 ">
           <div className="flex flex-col items-center justify-center">
             <PrefixSection text="../services" />
             <h2 className="text-3xl lg:text-4xl text-white font-bold  ">
               Meus Serviços
             </h2>
-            <p className="text-center text-large lg:text-xl mt-5 max-w-xl mx-auto">
+            <p className="text-center text-[22px] lg:text-2xl mt-5 max-w-xl mx-auto">
               Aqui estão alguns dos serviços que ofereço. Se você tem uma ideia
               ou projeto em mente, entre em contato comigo.
             </p>
@@ -35,12 +35,12 @@ export const ServicesSection = () => {
         className=" w-full lg:bg-top bg-no-repeat opacity-95 h-[400px]"
       >
         <div className="w-full h-full backdrop-blur-[2px]">
-          <div className="container lg:px-0 max-w-xl mx-auto h-full flex flex-col items-center justify-center text-center gap-5">
-            <h3 className="text-3xl lg:text-4xl text-white font-bold">
+          <div className="container lg:px-0 max-w-xl mx-auto h-full flex flex-col items-center justify-center text-center ">
+            <h3 className="text-3xl lg:text-4xl text-white font-bold ">
               Eleve sua produtividade. Comece a transformar suas ideias hoje
               mesmo.
             </h3>
-            <p className="text-gray-200 text-lg lg:text-xl">
+            <p className="text-gray-200 text-xl lg:text-[22px] mt-5">
               Vamos juntos criar algo incrível? Entre em contato e descubra como
               posso ajudar a transformar sua visão em realidade.
             </p>
@@ -48,7 +48,7 @@ export const ServicesSection = () => {
               variant="solid"
               as={Link}
               href="/#contact"
-              className="bg-[#AD2B49] text-white font-medium"
+              className="bg-[#AD2B49] !p-6 text-white font-medium text-xl lg:text-2xl mt-10"
             >
               Entre em contato
             </Button>
