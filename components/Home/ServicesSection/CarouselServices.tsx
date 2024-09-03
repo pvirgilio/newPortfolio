@@ -60,11 +60,13 @@ export default function CardServices() {
   const renderCard = (service: any, index: any) => (
     <Card
       key={index}
-      className="bg-gray-900 border border-gray-800 rounded-xl max-w-lg h-full p-6 shadow-lg flex flex-col items-center justify-start text-center !transition-transform duration-500 hover:scale-105"
+      className="bg-[#151515] border border-[#64192a] rounded-xl max-w-lg h-full p-6 shadow-lg flex flex-col items-center justify-start text-center !transition-transform duration-500 hover:scale-105"
     >
       <div className="text-5xl mb-4">{service.icon}</div>
-      <h2 className="text-2xl text-white font-bold mb-4">{service.title}</h2>
-      <p className="text-white text-[17px] mb-4 w-full leading-relaxed">
+      <h2 className="text-2xl lg:text-3xl text-white font-bold mb-4">
+        {service.title}
+      </h2>
+      <p className="text-white text-large lg:text-xl mb-4 w-full leading-relaxed">
         {service.description}
       </p>
     </Card>

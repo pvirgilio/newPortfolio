@@ -1,5 +1,6 @@
 "use client";
-import { Image } from "@nextui-org/react";
+
+import Image from "next/image";
 import React from "react";
 
 export function ImgIntroductionSection() {
@@ -9,17 +10,16 @@ export function ImgIntroductionSection() {
         <Image
           alt="Pedro Virgilio"
           className="w-full h-full rounded-lg object-cover"
-          disableSkeleton
           src="/me.png"
           width={450}
+          height={450}
           loading="lazy"
         />
       </div>
-      <div className="absolute -bottom-64 sm:top-0 sm:-right-0 z-0">
+      <div className="absolute -bottom-64 sm:-top-40 sm:-right-40 z-0">
         <Image
           alt="Pedro Virgilio"
-          className="rounded-lg object-cover sm:w-[1200px] sm:h-[1200px]"
-          disableSkeleton
+          className="rounded-lg object-cover w-[1200px] h-[1200px]"
           src="/Ellipse 1.png"
           width={850}
           height={850}
@@ -30,7 +30,6 @@ export function ImgIntroductionSection() {
         <Image
           alt="Pedro Virgilio"
           className="rounded-lg object-cover 2xl:w-[1200px] 2xl:h-[1200px]"
-          disableSkeleton
           src="/Ellipse 2.png"
           width={850}
           height={850}

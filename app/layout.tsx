@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import Nav from "@/components/navbar";
-import { manrope } from "@/config/fonts";
+import { blenderPro, manrope } from "@/config/fonts";
 import { FooterComponent } from "@/components/Footer";
 export const metadata: Metadata = {
   title: {
@@ -35,10 +35,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="pt-br">
       <head />
-      <body className={clsx("w-full h-full bg-black  ", manrope.className)}>
+      <body
+        className={clsx("w-full h-full !bg-[#070707]  ", blenderPro.className)}
+      >
         <Providers themeProps={{ attribute: "class" }}>
           <Nav />
-          <main className="w-full min-h-screen bg-black flex flex-col">
+          <main className="w-full min-h-screen !bg-[#070707] flex flex-col">
             {children}
           </main>
           <FooterComponent />

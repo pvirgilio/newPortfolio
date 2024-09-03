@@ -7,7 +7,7 @@ import { TextIntroductionSection } from "./TextIntroductionSection";
 
 const IntroductionSection = () => {
   return (
-    <section className="relative overflow-hidden w-full  min-h-mobile-menu flex flex-col items-center sm:justify-center lg:h-[93dvh]">
+    <section className="bg-[#070707] relative overflow-hidden w-full  min-h-mobile-menu flex flex-col items-center sm:justify-center lg:h-[93dvh]">
       <TextIntroductionSection />
       <ImgIntroductionSection />
     </section>

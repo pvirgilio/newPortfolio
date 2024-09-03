@@ -1,6 +1,5 @@
 "use client";
-import { Chip, Image } from "@nextui-org/react";
-import React from "react";
+import React, { useEffect } from "react";
 import ReactIcon from "../Icons/ReactIcon";
 import { JsIcon } from "../Icons/JsIcon";
 import CssIcon from "../Icons/CssIcon";
@@ -11,37 +10,113 @@ import TailwindIcon from "../Icons/TailwindIcon";
 import PrismaIcon from "../Icons/PrismaIcon";
 import PostgreSql from "../Icons/PostgreSql";
 import { MysqlIcon } from "../Icons/mysqlIcon";
-import { CircularSkills } from "./SkillSection/CircularProgress";
+
+const icons = [
+  {
+    Component: HtmlIcon,
+    className: "",
+    name: "HTML:",
+    description: "Linguagem de marcação usada para criar páginas web.",
+  },
+  {
+    Component: CssIcon,
+    className: "text-orange-600",
+    name: "CSS:",
+    description:
+      "Linguagem de estilo usada para descrever a apresentação de um documento HTML.",
+  },
+  {
+    Component: JsIcon,
+    className: "text-yellow-500",
+    name: "JavaScript:",
+    description:
+      "Linguagem de programação usada para criar conteúdo web dinâmico.",
+  },
+  {
+    Component: ReactIcon,
+    className: "text-blue-400",
+    name: "React:",
+    description: "Biblioteca JavaScript para construir interfaces de usuário.",
+  },
+  {
+    Component: NextIcon,
+    className: "",
+    name: "Next.js:",
+    description: "Framework React para desenvolvimento de aplicações web.",
+  },
+  {
+    Component: TailwindIcon,
+    className: "text-blue-400",
+    name: "Tailwind CSS:",
+    description: "Framework CSS para estilização rápida e eficiente.",
+  },
+  {
+    Component: NodeIcon,
+    className: "",
+    name: "Node.js:",
+    description: "Ambiente de execução JavaScript server-side.",
+  },
+  {
+    Component: MysqlIcon,
+    className: "",
+    name: "MySQL:",
+    description: "Sistema de gerenciamento de banco de dados relacional.",
+  },
+  {
+    Component: PrismaIcon,
+    className: "",
+    name: "Prisma:",
+    description: "ORM para Node.js e TypeScript.",
+  },
+  {
+    Component: PostgreSql,
+    className: "",
+    name: "PostgreSQL:",
+    description:
+      "Sistema de gerenciamento de banco de dados relacional e objeto-relacional.",
+  },
+];
 
 export default function ListIcons() {
+  const [description, setDescription] = React.useState<string | null>(null);
+  const [namesLanguages, setNamesLanguages] = React.useState<string | null>(
+    null
+  );
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 1280);
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth <= 1280);
+    });
+  }, []);
+
   return (
-    <div className=" w-full h-full mt-10 flex flex-col lg:flex-row items-center justify-center lg:items-start gap-10">
-      <div className="w-full flex flex-col  items-center justify-center gap-5">
-        <Chip color="default" size="md">
-          Front-End
-        </Chip>
-        <div className="w-full flex flex-col gap-x-3 gap-y-5">
-          <CircularSkills label="Html5" value={80} />
-          <CircularSkills label="Css3" value={70} />
-          <CircularSkills label="JavaScript" value={70} />
-          <CircularSkills label="React" value={50} />
-          <CircularSkills label="Nextjs" value={50} />
-          <CircularSkills label="Tailwindcss" value={50} />
-          <CircularSkills label="Figma" value={30} />
-        </div>
-      </div>
-      <div className="w-full flex flex-col items-center justify-center gap-5">
-        <Chip color="default" size="md">
-          Back-End
-        </Chip>
-        <div className="w-full flex flex-col gap-x-3 gap-y-5">
-          <CircularSkills label="NodeJs" value={30} />
-          <CircularSkills label="Express" value={30} />
-          <CircularSkills label="Prisma" value={20} />
-          <CircularSkills label="Mysql" value={20} />
-          <CircularSkills label="PostgreSql" value={20} />
-        </div>
-      </div>
+    <div className="w-full flex flex-col gap-20 justify-center items-center lg:flex-row lg:items-start lg:justify-between lg:gap-0 py-5">
+      <p className=" lg:max-w-lg text-xl lg:text-[22px] text-gray-300 flex flex-col items-start">
+        <strong>{namesLanguages}</strong>
+        {description || isMobile
+          ? "Clique em um ícone para saber mais sobre ele."
+          : "*Passe o mouse em cima de cada ícone para saber mais.*"}
+      </p>
+      <ul className=" grid place-items-center grid-cols-2 nm:grid-cols-3 sm:grid-cols-4 flex-wrap gap-5">
+        {icons.map(({ Component, className }, index) => (
+          <li
+            onMouseEnter={() => {
+              setDescription(icons[index].description);
+              setNamesLanguages(icons[index].name);
+            }}
+            onMouseLeave={() => {
+              setDescription(null);
+              setNamesLanguages(null);
+            }}
+            key={index}
+            className="flex flex-col items-center gap-2 border border-gray-800 bg-[#111111] w-[122px] h-[130px] justify-center rounded-lg hover:border-[#AD2B49] transition-colors duration-300 "
+          >
+            <Component className={`w-14 h-14 ${className}`} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

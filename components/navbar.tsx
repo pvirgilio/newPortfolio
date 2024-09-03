@@ -28,9 +28,9 @@ export default function Nav() {
 
   return (
     <Navbar
-      className=" container bg-black  w-full lg:px-0   "
+      className=" container  backdrop-blur-md  w-full lg:px-5 lg:rounded-full lg:top-3  "
       isMenuOpen={isMenuOpen}
-      position="static"
+      position="sticky"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="">
@@ -53,19 +53,19 @@ export default function Nav() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link className="text-xl" color="foreground" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/projects">
+          <Link className="text-xl" color="foreground" href="/projects">
             Projetos
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/#contact">
+          <Link className="text-xl" color="foreground" href="/#contact">
             Contato
           </Link>
         </NavbarItem>
