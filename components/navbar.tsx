@@ -54,51 +54,33 @@ export default function Nav() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
-        <div className="container-btn">
-          <Link href="/" className="radio-wrapper">
-            <input className="input" name="btn" id="value-1" type="radio" />
-            <div className="btn">
-              <span aria-hidden="true">_</span>Home
-              <span className="btn__glitch" aria-hidden="true">
-                _Home🦾
-              </span>
-              <label className="number" htmlFor="value-1">
-                r1
-              </label>
-            </div>
+        <NavbarItem>
+          <Link
+            className="text-white text-xl"
+            color={path === "/" ? "primary" : "foreground"}
+            href="/"
+          >
+            Home
           </Link>
-          <Link href="/projects" className="radio-wrapper">
-            <input
-              className="input"
-              name="btn"
-              id="value-2"
-              defaultChecked={true}
-              type="radio"
-            />
-            <div className="btn">
-              _Projetos<span aria-hidden="true">_</span>
-              <span className="btn__glitch" aria-hidden="true">
-                _P_r_o_j_e_t_o_s
-              </span>
-              <label className="number" htmlFor="value-2">
-                r2
-              </label>
-            </div>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            className="text-white text-xl"
+            color={path === "/" ? "primary" : "foreground"}
+            href="/projects"
+          >
+            Projetos
           </Link>
-          <Link href="/#contact" className="radio-wrapper">
-            <input className="input" name="btn" id="value-3" type="radio" />
-            <div className="btn">
-              Contato
-              <span aria-hidden="true" />
-              <span className="btn__glitch" aria-hidden="true">
-                Contato_
-              </span>
-              <label className="number" htmlFor="value-3">
-                r3
-              </label>
-            </div>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            className="text-white text-xl"
+            color={path === "/" ? "primary" : "foreground"}
+            href="/#contact"
+          >
+            Contato
           </Link>
-        </div>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"

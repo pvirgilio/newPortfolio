@@ -4,6 +4,7 @@ import IntroductionSection from "@/components/Home/IntroductionSection/Introduct
 
 import ProjectSection from "@/components/Home/Projects/ProjectSection";
 import { ServicesSection } from "@/components/Home/ServicesSection/ServicesSection";
+
 import SkillSection from "@/components/Home/SkillSection/SkillSection";
 
 export default function Home() {

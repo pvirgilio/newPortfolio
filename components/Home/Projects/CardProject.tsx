@@ -61,7 +61,7 @@ const CardProject = ({
   return (
     <Card
       isFooterBlurred
-      className="max-w-[450px] lg:max-w-[500px] h-[300px] xl:h-[350px] group"
+      className="max-w-[450px] lg:max-w-[500px] h-[300px] group"
     >
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">{model}</p>

@@ -1,13 +1,50 @@
 "use client";
 import { Divider, Image } from "@nextui-org/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ListIcons from "./ListIcons";
 import Icons from "./icons";
 import PrefixSection from "./PrefixSection";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function AboutMeSection() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0, y: 50 }, // Estado inicial da animação
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: sectionRef.current, // Elemento que dispara a animação
+            start: "top 80%", // Define o ponto de início da animação
+            end: "bottom 50%", // Define o ponto de término da animação
+            scrub: true, // Suaviza a animação conforme o scroll
+            toggleActions: "play none none reverse",
+            onEnterBack: () => {
+              // Animação quando o usuário rola para cima e o elemento entra de volta na tela
+              gsap.fromTo(
+                sectionRef.current,
+                { opacity: 0, y: 50 },
+                { opacity: 1, y: 0, duration: 1 }
+              );
+            }, // Repetir animação ao rolar para cima ou para baixo
+          },
+        }
+      );
+    }
+    return () => {
+      ScrollTrigger.killAll();
+    };
+  }, []);
   return (
     <section
+      ref={sectionRef}
       id="about-me"
       className="w-full bg-[#070707] min-h-mobile-nav lg:min-h-full py-20 lg:py-20 "
     >
