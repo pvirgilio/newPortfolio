@@ -7,6 +7,7 @@ import {
   Poppins,
   Inter,
   Space_Mono,
+  Quantico,
 } from "next/font/google";
 
 import localFont from "next/font/local";
@@ -62,6 +63,12 @@ export const blenderPro = localFont({
       style: "normal",
     },
   ],
+});
+
+export const quantico = Quantico({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-quantico",
 });
 
 export const inter = Inter({

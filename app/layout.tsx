@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import Nav from "@/components/navbar";
-import { blenderPro, manrope } from "@/config/fonts";
+import { blenderPro, manrope, quantico } from "@/config/fonts";
 import { FooterComponent } from "@/components/Footer";
 export const metadata: Metadata = {
   title: {
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="pt-br">
       <head />
       <body
-        className={clsx("w-full h-full !bg-[#070707]  ", blenderPro.className)}
+        className={clsx("w-full h-full !bg-[#070707]  ", quantico.className)}
       >
         <Providers themeProps={{ attribute: "class" }}>
           <Nav />

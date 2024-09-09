@@ -6,13 +6,13 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-full bg-[#070707] pb-20 lg:pt-20  ">
+    <section id="contact" className="w-full bg-[#070707] pb-20 pt-20  ">
       <div className="container lg:px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-5  ">
-          <h2 className="text-4xl font-bold text-white xl:text-5xl">
+          <h2 className="text-2xl font-bold text-white xl:text-5xl">
             Envie uma mensagem
           </h2>
-          <p className="max-w-full md:max-w-lg text-[22px] lg:text-2xl ">
+          <p className="max-w-full font-sans md:max-w-lg text-lg lg:text-2xl ">
             Estou sempre aberto a novos projetos e oportunidades de trabalho. Se
             você tem uma ideia ou projeto em mente, entre em contato comigo.
           </p>
@@ -38,8 +38,8 @@ export default function ContactSection() {
                 name="name"
                 label="Nome"
                 classNames={{
-                  input: "text-xl",
-                  label: "text-xl",
+                  input: "text-base",
+                  label: "text-base",
                 }}
               />
             </div>
@@ -52,8 +52,8 @@ export default function ContactSection() {
                 type="email"
                 label="Email"
                 classNames={{
-                  input: "text-xl",
-                  label: "text-xl",
+                  input: "text-base",
+                  label: "text-base",
                 }}
               />
             </div>
@@ -67,8 +67,8 @@ export default function ContactSection() {
                 label="Número de telefone"
                 className="w-full"
                 classNames={{
-                  input: "text-xl",
-                  label: "text-xl",
+                  input: "text-base",
+                  label: "text-base",
                 }}
               />
             </div>
@@ -78,8 +78,8 @@ export default function ContactSection() {
                 required
                 name="message"
                 classNames={{
-                  input: "min-h-[200px] text-xl",
-                  label: "text-xl",
+                  input: "min-h-[200px] text-base",
+                  label: "text-base",
                 }}
                 label="Mensagem"
                 labelPlacement="inside"
@@ -88,7 +88,7 @@ export default function ContactSection() {
               />
             </div>
             <Button
-              className="text-xl bg-[#AD2B49]"
+              className="text-base bg-[#AD2B49]"
               variant="ghost"
               type="submit"
             >

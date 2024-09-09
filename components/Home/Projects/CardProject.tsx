@@ -65,7 +65,7 @@ const CardProject = ({
     >
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">{model}</p>
-        <h4 className="text-white/90 font-medium text-2xl lg:text-3xl">
+        <h4 className="text-white/90 font-medium text-xl lg:text-3xl">
           {text}
         </h4>
       </CardHeader>
@@ -82,7 +82,7 @@ const CardProject = ({
           <Link target="_blank" href={linkGithub}>
             <Button
               variant="ghost"
-              className="border-1 text-lg border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-base border-gray-300 hover:!bg-[#AD2B49]"
             >
               <GithubIcon />
               Github
@@ -91,7 +91,7 @@ const CardProject = ({
           <Link target="_blank" href={linkSite}>
             <Button
               variant="ghost"
-              className="border-1 text-lg border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-base border-gray-300 hover:!bg-[#AD2B49]"
             >
               <Globe />
               Website

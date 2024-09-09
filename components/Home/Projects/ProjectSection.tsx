@@ -21,7 +21,7 @@ export default function ProjectSection() {
             className="w-fit   font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
             href={"/projects"}
           >
-            <span className="inline-block text-xl lg:text-2xl">
+            <span className="inline-block text-lg lg:text-2xl">
               Ver mais projetos
             </span>
           </Link>
