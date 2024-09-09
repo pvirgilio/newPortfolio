@@ -59,7 +59,7 @@ const TextIntroductionSection = () => {
         <h1>Olá, meu nome é</h1>
         <h2 className="whitespace-nowrap">Pedro Virgilio</h2>
       </div>
-      <div className="flex justify-center flex-wrap gap-1 text-xl font-medium text-center lg:text-3xl">
+      <div className="flex justify-center text-white flex-wrap gap-1 text-xl font-medium text-center lg:text-3xl">
         <h2>Desenvolvedor</h2>
         <h2 className="whitespace-nowrap">Front-End</h2>
       </div>
