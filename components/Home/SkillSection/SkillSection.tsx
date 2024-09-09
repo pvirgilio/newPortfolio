@@ -13,7 +13,7 @@ export default function SkillSection() {
     <section className="w-full bg-[#111111] py-20  ">
       <div className="container  w-full flex flex-col items-center mx-auto lg:!px-0 lg:items-start  lg:gap-0">
         <PrefixSection text="../skills" />
-        <h2 className="text-2xl font-extrabold text-white xl:text-4xl">
+        <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold text-white ">
           Habilidades
         </h2>
         <Divider className=" my-4" />

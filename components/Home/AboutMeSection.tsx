@@ -51,7 +51,7 @@ export default function AboutMeSection() {
       <article className="relative container w-full h-full flex flex-col   lg:px-0 ">
         <article className=" flex flex-col items-center lg:flex-row-reverse gap-6 lg:gap-10 lg:items-start  ">
           <PrefixSection text="../about" classe="lg:hidden -mb-5" />
-          <h2 className="block lg:hidden text-2xl xl:text-4xl  border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0  w-fit  ">
+          <h2 className="block lg:hidden text-2xl 2xl:text-4xl  border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0  w-fit  ">
             Sobre mim
           </h2>
 
@@ -66,24 +66,24 @@ export default function AboutMeSection() {
             </article>
             <div className="flex flex-col items-center lg:items-start	  ">
               <PrefixSection text="../about" classe="hidden lg:block " />
-              <h2 className="hidden lg:block text-white text-3xl lg:text-[22px] lg:text-3xl xl:text-4xl  font-bold mx-auto lg:mx-0  w-fit  ">
+              <h2 className="hidden lg:block text-white text-2xl sm:text-3xl 2xl:text-4xl font-bold mx-auto lg:mx-0  w-fit  ">
                 Sobre mim
               </h2>
               <Divider className="my-2" />
-              <p className="text-base text-gray-300   xl:text- leading-[1.78]">
+              <p className="text-base sm:text-lg 2xl:text-xl text-gray-300 leading-relaxed ">
                 Olá, meu nome é Pedro, tenho 22 anos. Sou um recém formado em
                 Ciência da Computação e sou especializado em desenvolvimento
                 web.
               </p>
 
               <br />
-              <p className="text-baselg:text-[24px]   text-gray-300 leading-relaxed ">
+              <p className="text-base sm:text-lg 2xl:text-xl text-gray-300 leading-relaxed ">
                 Atualmente sou desenvolvedor Front-End, com experiência em
                 React, Next.js, TailwindCSS, Styled-Components, e outras
                 tecnologias, mas pretendo me tornar um desenvolvedor Full-Stack.
               </p>
               <br />
-              <p className="text-base lg:text-[24px]   text-gray-300 leading-relaxed  ">
+              <p className="text-base sm:text-lg 2xl:text-xl text-gray-300 leading-relaxed  ">
                 Tenho experiência em várias tecnologias, incluindo{" "}
                 <span className="italic text-gray-400">
                   HTML, CSS, JavaScript, Node, React e Next.js

@@ -65,7 +65,7 @@ const CardProject = ({
     >
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">{model}</p>
-        <h4 className="text-white/90 font-medium text-xl lg:text-3xl">
+        <h4 className="text-white/90 font-medium text-lg sm:text-xl 2xl:text-2xl">
           {text}
         </h4>
       </CardHeader>
@@ -108,7 +108,7 @@ export function CardsProjectSection() {
   const displayProjects =
     path === "/projects" ? cardData : cardData.slice(0, 3);
   return (
-    <article className="grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
+    <article className="grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3 ">
       {displayProjects.map((card, index) => (
         <CardProject
           key={index}

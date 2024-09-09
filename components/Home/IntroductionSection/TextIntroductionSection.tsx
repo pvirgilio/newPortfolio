@@ -53,18 +53,18 @@ const TextIntroductionSection = () => {
   return (
     <article
       ref={sectionRef}
-      className="max-w-[320px] h-fit pt-10 flex flex-col items-center z-30 lg:px-0 lg:items-start"
+      className="max-w-[520px] lg:max-w-[700px] h-fit pt-10 flex flex-col items-center justify-center mx-auto z-30 lg:px-0 "
     >
-      <div className="flex justify-center flex-wrap text-3xl font-bold text-center">
+      <div className="flex justify-center flex-wrap min-[380px]:gap-2 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-center">
         <h1>Olá, meu nome é</h1>
         <h2 className="whitespace-nowrap">Pedro Virgilio</h2>
       </div>
-      <div className="mt-2 flex justify-center flex-wrap gap-1 text-xl font-medium text-center lg:text-3xl">
+      <div className="flex justify-center flex-wrap gap-1 text-xl font-medium text-center lg:text-3xl">
         <h2>Desenvolvedor</h2>
         <h2 className="whitespace-nowrap">Front-End</h2>
       </div>
 
-      <p className="text-[#e3e3e3]   pt-5 text-center font-normal  sm:text-start text-lg lg:text-2xl">
+      <p className="text-[#e3e3e3] w-full nm:w-[70%]   pt-5 text-center font-normal text-lg lg:text-xl">
         Apaixonado por tecnologia e com experiência na construção de aplicações
         web modernas.
       </p>

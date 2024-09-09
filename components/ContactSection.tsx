@@ -9,10 +9,10 @@ export default function ContactSection() {
     <section id="contact" className="w-full bg-[#070707] pb-20 pt-20  ">
       <div className="container lg:px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-5  ">
-          <h2 className="text-2xl font-bold text-white xl:text-5xl">
+          <h2 className="font-bold text-white text-2xl sm:text-3xl 2xl:text-4xl">
             Envie uma mensagem
           </h2>
-          <p className="max-w-full   md:max-w-lg text-lg lg:text-2xl ">
+          <p className="max-w-full   md:max-w-lg text-base sm:text-lg 2xl:text-xl">
             Estou sempre aberto a novos projetos e oportunidades de trabalho. Se
             você tem uma ideia ou projeto em mente, entre em contato comigo.
           </p>
@@ -38,8 +38,8 @@ export default function ContactSection() {
                 name="name"
                 label="Nome"
                 classNames={{
-                  input: "text-base",
-                  label: "text-base",
+                  input: "text-base ",
+                  label: "text-base ",
                 }}
               />
             </div>

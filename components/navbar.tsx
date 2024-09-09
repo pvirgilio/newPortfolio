@@ -56,7 +56,7 @@ export default function Nav() {
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
           <Link
-            className="text-white text-xl"
+            className="text-white text-lg"
             color={path === "/" ? "primary" : "foreground"}
             href="/"
           >
@@ -65,7 +65,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white text-xl"
+            className="text-white text-lg"
             color={path === "/" ? "primary" : "foreground"}
             href="/projects"
           >
@@ -74,7 +74,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white text-xl"
+            className="text-white text-lg"
             color={path === "/" ? "primary" : "foreground"}
             href="/#contact"
           >

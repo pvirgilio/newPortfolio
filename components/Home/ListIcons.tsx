@@ -84,7 +84,7 @@ export default function ListIcons() {
   );
   return (
     <div className="w-full flex flex-col gap-20 justify-center items-center lg:flex-row lg:items-start lg:justify-between lg:gap-0 py-5">
-      <p className="hidden md:flex lg:max-w-lg text-xl lg:text-[22px] text-gray-300  flex-col items-start">
+      <p className="hidden md:flex lg:max-w-lg text-base sm:text-lg 2xl:text-xl text-gray-300  flex-col items-start">
         <strong>{namesLanguages}</strong>
         {description
           ? description

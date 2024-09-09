@@ -10,7 +10,7 @@ export default function ProjectSection() {
       <div className="container lg:px-0 flex flex-col gap-5 py-20   ">
         <div className="w-full">
           <PrefixSection text="../projects" classe="text-start -mb-10" />
-          <h2 className="text-2xl font-bold text-white xl:text-3xl text-start">
+          <h2 className=" font-bold text-white text-2xl sm:text-3xl 2xl:text-4xl text-start">
             Principais Projetos
           </h2>
           <Divider className="my-4 " />
@@ -21,7 +21,7 @@ export default function ProjectSection() {
             className="w-fit   font-semibold border border-transparent hover:border-[#AD2B49] transition duration-300 p-2 rounded-full"
             href={"/projects"}
           >
-            <span className="inline-block text-lg lg:text-2xl">
+            <span className="inline-block text-base sm:text-lg lg:text-xl">
               Ver mais projetos
             </span>
           </Link>

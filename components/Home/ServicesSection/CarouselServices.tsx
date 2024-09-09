@@ -63,10 +63,10 @@ export default function CardServices() {
       className="bg-[#151515] border border-[#64192a] rounded-xl max-w-lg h-full p-6 shadow-lg flex flex-col items-center justify-start text-center !transition-transform duration-500 hover:scale-105"
     >
       <div className="text-5xl mb-4">{service.icon}</div>
-      <h2 className="text-xl lg:text-3xl text-white font-bold mb-4">
+      <h2 className="text-lg sm:text-xl lg:text-2xl text-white font-bold mb-4">
         {service.title}
       </h2>
-      <p className="text-white text-base   lg:text-[22px] mb-4 w-full leading-relaxed">
+      <p className="text-white text-base sm:text-lg 2xl:text-xl mb-4 w-full leading-relaxed">
         {service.description}
       </p>
     </Card>
