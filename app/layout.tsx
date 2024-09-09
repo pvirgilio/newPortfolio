@@ -41,7 +41,8 @@ export default function RootLayout({
           interDisplay.className
         )}
       >
-        <Providers themeProps={{ attribute: "class" }}>
+        {/* themeProps={{ attribute: "class" }} */}
+        <Providers>
           <Nav />
           <main className="w-full min-h-screen !bg-[#070707] flex flex-col">
             {children}

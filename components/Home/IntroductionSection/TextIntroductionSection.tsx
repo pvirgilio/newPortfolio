@@ -29,7 +29,7 @@ const TextIntroductionSection = () => {
           // Animação ao entrar na visualização
           gsap.fromTo(
             sectionRef.current,
-            { opacity: 0, y: 80 },
+            { opacity: 0, y: 50 },
             { opacity: 1, y: 0, duration: 1 }
           );
         },
@@ -37,7 +37,7 @@ const TextIntroductionSection = () => {
           // Animação quando o usuário rola para cima e o elemento entra de volta na tela
           gsap.fromTo(
             sectionRef.current,
-            { opacity: 0, y: 80 },
+            { opacity: 0, y: 50 },
             { opacity: 1, y: 0, duration: 1 }
           );
         },
