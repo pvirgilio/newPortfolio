@@ -64,7 +64,7 @@ const TextIntroductionSection = () => {
         <h2 className="whitespace-nowrap">Front-End</h2>
       </div>
 
-      <p className="text-[#e3e3e3] font-sans pt-5 text-center font-normal  sm:text-start text-lg lg:text-2xl">
+      <p className="text-[#e3e3e3]   pt-5 text-center font-normal  sm:text-start text-lg lg:text-2xl">
         Apaixonado por tecnologia e com experiência na construção de aplicações
         web modernas.
       </p>

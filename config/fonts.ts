@@ -65,6 +65,101 @@ export const blenderPro = localFont({
   ],
 });
 
+export const interDisplay = localFont({
+  src: [
+    {
+      path: "./fonts/InterDisplay-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-ExtraBoldItalic.ttf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-ExtraLightItalic.ttf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "./fonts/InterDisplay-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterDisplay-ThinItalic.ttf",
+      weight: "100",
+      style: "italic",
+    },
+  ],
+});
+
 export const quantico = Quantico({
   subsets: ["latin"],
   weight: ["400", "700"],

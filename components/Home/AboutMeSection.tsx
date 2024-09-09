@@ -70,20 +70,20 @@ export default function AboutMeSection() {
                 Sobre mim
               </h2>
               <Divider className="my-2" />
-              <p className="text-base text-gray-300 font-sans xl:text- leading-[1.78]">
+              <p className="text-base text-gray-300   xl:text- leading-[1.78]">
                 Olá, meu nome é Pedro, tenho 22 anos. Sou um recém formado em
                 Ciência da Computação e sou especializado em desenvolvimento
                 web.
               </p>
 
               <br />
-              <p className="text-baselg:text-[24px] font-sans text-gray-300 leading-relaxed ">
+              <p className="text-baselg:text-[24px]   text-gray-300 leading-relaxed ">
                 Atualmente sou desenvolvedor Front-End, com experiência em
                 React, Next.js, TailwindCSS, Styled-Components, e outras
                 tecnologias, mas pretendo me tornar um desenvolvedor Full-Stack.
               </p>
               <br />
-              <p className="text-base lg:text-[24px] font-sans text-gray-300 leading-relaxed  ">
+              <p className="text-base lg:text-[24px]   text-gray-300 leading-relaxed  ">
                 Tenho experiência em várias tecnologias, incluindo{" "}
                 <span className="italic text-gray-400">
                   HTML, CSS, JavaScript, Node, React e Next.js

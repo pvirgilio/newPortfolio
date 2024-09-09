@@ -12,7 +12,7 @@ export default function ContactSection() {
           <h2 className="text-2xl font-bold text-white xl:text-5xl">
             Envie uma mensagem
           </h2>
-          <p className="max-w-full font-sans md:max-w-lg text-lg lg:text-2xl ">
+          <p className="max-w-full   md:max-w-lg text-lg lg:text-2xl ">
             Estou sempre aberto a novos projetos e oportunidades de trabalho. Se
             você tem uma ideia ou projeto em mente, entre em contato comigo.
           </p>

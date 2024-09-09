@@ -66,7 +66,7 @@ export default function CardServices() {
       <h2 className="text-xl lg:text-3xl text-white font-bold mb-4">
         {service.title}
       </h2>
-      <p className="text-white text-base font-sans lg:text-[22px] mb-4 w-full leading-relaxed">
+      <p className="text-white text-base   lg:text-[22px] mb-4 w-full leading-relaxed">
         {service.description}
       </p>
     </Card>

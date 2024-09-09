@@ -22,6 +22,8 @@
   --font-size-7xl: 4.5rem; /* 72px */
   --font-size-8xl: 6rem; /* 96px */
   --font-size-9xl: 8rem; /* 128px */
+
+  --font-inter-display: "InterDisplay", sans-serif;
 }
 
 * {

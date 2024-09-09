@@ -26,6 +26,9 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        interDisplay: "var(--font-inter-display)",
+      },
       fontSize: {
         xs: "var(--font-size-xs)",
         sm: "var(--font-size-sm)",
