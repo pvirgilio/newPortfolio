@@ -74,6 +74,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
 }) => {
   return (
     <svg
+      className="text-white"
       height={size || height}
       viewBox="0 0 24 24"
       width={size || width}

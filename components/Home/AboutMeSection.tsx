@@ -51,7 +51,7 @@ export default function AboutMeSection() {
       <article className="relative container w-full h-full flex flex-col   lg:px-0 ">
         <article className=" flex flex-col items-center lg:flex-row-reverse gap-6 lg:gap-10 lg:items-start  ">
           <PrefixSection text="../about" classe="lg:hidden -mb-5" />
-          <h2 className="block lg:hidden text-2xl 2xl:text-4xl  border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0  w-fit  ">
+          <h2 className="block text-white lg:hidden text-2xl 2xl:text-4xl  border-b-2 border-[#AD2B49] font-bold mx-auto lg:mx-0  w-fit  ">
             Sobre mim
           </h2>
 

@@ -55,7 +55,7 @@ const TextIntroductionSection = () => {
       ref={sectionRef}
       className="max-w-[520px] lg:max-w-[700px] h-fit pt-10 flex flex-col items-center justify-center mx-auto z-30 lg:px-0 "
     >
-      <div className="flex justify-center flex-wrap min-[380px]:gap-2 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-center">
+      <div className="flex justify-center flex-wrap text-white min-[380px]:gap-2 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-center">
         <h1>Olá, meu nome é</h1>
         <h2 className="whitespace-nowrap">Pedro Virgilio</h2>
       </div>

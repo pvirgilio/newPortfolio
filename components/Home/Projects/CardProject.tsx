@@ -77,12 +77,12 @@ const CardProject = ({
         width={500}
         height={500}
       />
-      <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+      <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-gray-600 dark:border-default-100">
         <div className="flex flex-grow gap-2 items-center ">
           <Link target="_blank" href={linkGithub}>
             <Button
               variant="ghost"
-              className="border-1 text-base border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-base text-white border-gray-300 hover:!bg-[#AD2B49]"
             >
               <GithubIcon />
               Github
@@ -91,9 +91,9 @@ const CardProject = ({
           <Link target="_blank" href={linkSite}>
             <Button
               variant="ghost"
-              className="border-1 text-base border-gray-300 hover:!bg-[#AD2B49]"
+              className="border-1 text-base text-white border-gray-300 hover:!bg-[#AD2B49]"
             >
-              <Globe />
+              <Globe color="white" />
               Website
             </Button>
           </Link>

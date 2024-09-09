@@ -28,7 +28,7 @@ export default function Nav() {
 
   return (
     <Navbar
-      className=" container  backdrop-blur-md  w-full lg:px-5 lg:rounded-full lg:top-3  "
+      className=" container !bg-[#070707]  backdrop-blur-md  w-full lg:px-5 lg:rounded-full lg:top-3  "
       isMenuOpen={isMenuOpen}
       position="sticky"
       onMenuOpenChange={setIsMenuOpen}

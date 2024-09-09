@@ -12,7 +12,7 @@ export default function ContactSection() {
           <h2 className="font-bold text-white text-2xl sm:text-3xl 2xl:text-4xl">
             Envie uma mensagem
           </h2>
-          <p className="max-w-full   md:max-w-lg text-base sm:text-lg 2xl:text-xl">
+          <p className="max-w-full text-white   md:max-w-lg text-base sm:text-lg 2xl:text-xl">
             Estou sempre aberto a novos projetos e oportunidades de trabalho. Se
             você tem uma ideia ou projeto em mente, entre em contato comigo.
           </p>
@@ -37,8 +37,9 @@ export default function ContactSection() {
                 type="text"
                 name="name"
                 label="Nome"
+                color="default"
                 classNames={{
-                  input: "text-base ",
+                  input: "text-base  ",
                   label: "text-base ",
                 }}
               />
@@ -50,6 +51,7 @@ export default function ContactSection() {
                 isClearable
                 name="email"
                 type="email"
+                color="default"
                 label="Email"
                 classNames={{
                   input: "text-base",
@@ -65,6 +67,7 @@ export default function ContactSection() {
                 type="number"
                 name="phone"
                 label="Número de telefone"
+                color="default"
                 className="w-full"
                 classNames={{
                   input: "text-base",
@@ -77,6 +80,7 @@ export default function ContactSection() {
                 isRequired
                 required
                 name="message"
+                color="default"
                 classNames={{
                   input: "min-h-[200px] text-base",
                   label: "text-base",

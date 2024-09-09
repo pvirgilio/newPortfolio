@@ -16,7 +16,7 @@ export const ServicesSection = () => {
             <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold  text-white  ">
               Meus Serviços
             </h2>
-            <p className="text-center text-base sm:text-lg 2xl:text-xl mt-5 max-w-xl mx-auto">
+            <p className="text-center text-white text-base sm:text-lg 2xl:text-xl mt-5 max-w-xl mx-auto">
               Aqui estão alguns dos serviços que ofereço. Se você tem uma ideia
               ou projeto em mente, entre em contato comigo.
             </p>
