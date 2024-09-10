@@ -12,6 +12,7 @@ const IntroductionSection = () => {
         <TextIntroductionSection />
         <ImgIntroductionSection />
       </div>
+      <div className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-[#AD2B49]/10 to-transparent"></div>
     </section>
   );
 };

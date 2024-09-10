@@ -1,103 +1,153 @@
 "use client";
-import React from "react";
-import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
+import React, { useEffect, useRef } from "react";
+import { Card, CardBody, CardFooter, Button, Chip } from "@nextui-org/react";
 import Image from "next/image";
-import { GithubIcon } from "@/components/icons";
-import { Globe } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import gsap from "gsap";
 
 const cardData = [
   {
     model: "Landing page",
-    text: "Savant Web site",
+    title: "Savant Web site",
+    description: "Site institucional para empresa de tecnologia.",
     image: "/Home/ProjectSection/savantsitemockup.png",
     linkGithub: "https://github.com/pvirgilio/savant-newportoflio.git",
     linkSite: "https://savantweb.com.br/",
+    technologies: ["React", "Next.js", "TailwindCSS"],
   },
   {
     model: "Landing page",
-    text: "Clínica Odontológica",
+    title: "Clínica Odontológica",
+    description: "Site para clínica odontológica com agendamento online.",
     image: "/Home/ProjectSection/odontosite.png",
     linkGithub: "https://github.com/pvirgilio/bw-odonto2.git",
     linkSite: "https://odontosite.netlify.app/",
+    technologies: ["React", "Styled-Components", "Netlify"],
   },
   {
     model: "Landing page",
-    text: "Site Social Media",
+    title: "Site Social Media",
+    description: "Página de links para redes sociais personalizável.",
     image: "/Home/ProjectSection/linkspagemockup.png",
     linkSite: "https://linkspage.netlify.app/",
     linkGithub: "https://github.com/pvirgilio/linksPage.git",
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     model: "Landing page",
-    text: "Sorteador de Rifas",
+    title: "Sorteador de Rifas",
+    description: "Aplicação web para sorteio de rifas online.",
     image: "/Home/ProjectSection/imgSorteador.png",
     linkSite: "https://sorteador-five-alpha.vercel.app/",
     linkGithub: "https://github.com/pvirgilio/sorteador.git",
+    technologies: ["React", "Next.js", "TailwindCSS"],
   },
   {
     model: "Landing page",
-    text: "Meu Portfólio",
+    title: "Meu Portfólio",
+    description: "Site pessoal para exibição de projetos e habilidades.",
     image: "/Home/ProjectSection/imgPortfolio.png",
     linkSite: "https://pedrovirgilio.vercel.app/",
     linkGithub: "https://github.com/pvirgilio/newPortfolio",
+    technologies: ["React", "Next.js", "TailwindCSS"],
   },
 ];
 
 const CardProject = ({
   model,
-  text,
+  title,
+  description,
   image,
   linkGithub,
   linkSite,
+  technologies,
 }: {
   model: string;
-  text: string;
+  title: string;
+  description: string;
   image: string;
   linkGithub: string;
   linkSite: string;
+  technologies: string[];
 }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (card) {
+      gsap.fromTo(
+        card,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom-=100",
+            end: "bottom top+=100",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
-    <Card
-      isFooterBlurred
-      className="max-w-[450px] lg:max-w-[500px] h-[300px] group"
-    >
-      <CardHeader className="absolute z-10 top-1 flex-col items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">{model}</p>
-        <h4 className="text-white/90 font-medium text-lg sm:text-xl 2xl:text-2xl">
-          {text}
-        </h4>
-      </CardHeader>
-      <Image
-        alt="Relaxing app background"
-        className="z-0 max-w-full h-full group-hover:scale-110 transition-transform duration-500"
-        objectFit="cover"
-        src={image}
-        width={500}
-        height={500}
-      />
-      <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-gray-600 dark:border-default-100">
-        <div className="flex flex-grow gap-2 items-center ">
-          <Link target="_blank" href={linkGithub}>
-            <Button
-              variant="ghost"
-              className="border-1 text-base text-white border-gray-300 hover:!bg-[#AD2B49]"
-            >
-              <GithubIcon />
-              Github
-            </Button>
-          </Link>
-          <Link target="_blank" href={linkSite}>
-            <Button
-              variant="ghost"
-              className="border-1 text-base text-white border-gray-300 hover:!bg-[#AD2B49]"
-            >
-              <Globe color="white" />
-              Website
-            </Button>
-          </Link>
+    <Card ref={cardRef} className="w-full max-w-[400px] h-[450px] bg-[#1A1A1A]">
+      <CardBody className="p-0">
+        <div className="relative w-full h-48">
+          <Image
+            alt={title}
+            className="object-cover"
+            src={image}
+            layout="fill"
+          />
+          <div className="absolute top-2 left-2 backdrop-blur-sm bg-black/60 text-white text-xs sm:text-sm font-medium px-2 py-1 rounded">
+            {model}
+          </div>
         </div>
+        <div className="p-4">
+          <h4 className="text-white font-semibold text-lg sm:text-xl mb-2">
+            {title}
+          </h4>
+          <p className="text-gray-300 text-xs sm:text-sm mb-4">{description}</p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {technologies.map((tech, index) => (
+              <Chip
+                key={index}
+                size="sm"
+                className="bg-[#AD2B49] text-white font-medium text-xs sm:text-sm"
+              >
+                {tech}
+              </Chip>
+            ))}
+          </div>
+        </div>
+      </CardBody>
+      <CardFooter className="justify-between bg-[#2A2A2A] border-t border-gray-700">
+        <Button
+          as={Link}
+          href={linkGithub}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#333] text-white text-xs sm:text-sm"
+          startContent={<FaGithub className="text-sm sm:text-base" />}
+        >
+          GitHub
+        </Button>
+        <Button
+          as={Link}
+          href={linkSite}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#AD2B49] text-white text-xs sm:text-sm"
+          startContent={<FaGlobe className="text-sm sm:text-base" />}
+        >
+          Site
+        </Button>
       </CardFooter>
     </Card>
   );
@@ -108,17 +158,19 @@ export function CardsProjectSection() {
   const displayProjects =
     path === "/projects" ? cardData : cardData.slice(0, 3);
   return (
-    <article className="grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 place-items-center lg:mt-10">
       {displayProjects.map((card, index) => (
         <CardProject
           key={index}
           model={card.model}
-          text={card.text}
+          title={card.title}
+          description={card.description}
           image={card.image}
           linkGithub={card.linkGithub}
           linkSite={card.linkSite}
+          technologies={card.technologies}
         />
       ))}
-    </article>
+    </div>
   );
 }

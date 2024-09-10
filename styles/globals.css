@@ -25,6 +25,17 @@
 
   --font-inter-display: "InterDisplay", sans-serif;
 }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 * {
   margin: 0;
@@ -348,4 +359,18 @@ body {
   top: 0;
   left: 81%;
   line-height: 6.2px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
 }
