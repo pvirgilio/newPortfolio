@@ -64,8 +64,8 @@ export default function ProjectSection() {
           duration: 0.5,
           scrollTrigger: {
             trigger: link,
-            start: "top 90%",
-            end: "bottom 20%",
+            start: "top 95%",
+            end: "bottom 5%",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -89,7 +89,7 @@ export default function ProjectSection() {
             ref={titleRef}
             className="font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-start"
           >
-            Principais Projetos
+            Projetos & Experiências
           </h2>
           <Divider className="my-4 sm:my-6" />
         </div>

@@ -27,7 +27,7 @@ export function FooterComponent() {
                 width={150}
               />
             </Link>
-            <p className="mt-4 text-gray-400 text-sm">
+            <p className="mt-4 text-gray-400 text-sm lg:text-base">
               Desenvolvedor Front-end apaixonado por criar experiências web
               incríveis e funcionais. Especializado em React, Next.js e design
               responsivo.
@@ -94,30 +94,30 @@ export function FooterComponent() {
         {/* Redes Sociais e Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 sm:mb-0">
-            <a
+            <Link
               href="https://www.instagram.com/pedrovirgiliodev/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#AD2B49] transition-colors duration-300"
             >
               <InstagramIcon className="w-6 h-6" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://github.com/pvirgilio"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#AD2B49] transition-colors duration-300"
             >
               <GithubIcon className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/pedro-virgilio-661227209/"
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/pedrovirgilio"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#AD2B49] transition-colors duration-300"
             >
               <LinkedinIcon className="w-6 h-6" />
-            </a>
+            </Link>
           </div>
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} Pedro Virgilio. Todos os direitos

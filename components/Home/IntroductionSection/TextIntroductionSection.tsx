@@ -76,7 +76,7 @@ const TextIntroductionSection = () => {
 
       <div className="flex justify-center gap-4 sm:gap-5 mt-6 sm:mt-8">
         <Link
-          href="https://linkedin.com/in/seu-perfil"
+          href="https://linkedin.com/in/pedrovirgilio"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center transition-transform duration-300 ease-in-out hover:-translate-y-1"
@@ -89,7 +89,7 @@ const TextIntroductionSection = () => {
           </span>
         </Link>
         <Link
-          href="https://github.com/seu-usuario"
+          href="https://github.com/pvirgilio"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center transition-transform duration-300 ease-in-out hover:-translate-y-1"
@@ -102,7 +102,7 @@ const TextIntroductionSection = () => {
           </span>
         </Link>
         <Link
-          href="https://instagram.com/seu-usuario"
+          href="https://instagram.com/pedrovirgiliodev"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center transition-transform duration-300 ease-in-out hover:-translate-y-1"

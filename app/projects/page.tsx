@@ -7,7 +7,7 @@ export default function DocsPage() {
     <section className="w-full h-full my-10 lg:my-20">
       <div className="w-full container lg:px-0 ">
         <div className="w-full flex justify-center">
-          <h1 className={clsx(title(), "")}>Meus Projetos</h1>
+          <h1 className={clsx(title(), "")}>Projetos & Experiências</h1>
         </div>
         <CardsProjectSection />
       </div>

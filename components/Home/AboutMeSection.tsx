@@ -116,7 +116,7 @@ export default function AboutMeSection() {
               <h3 className="text-2xl font-semibold text-[#AD2B49] mb-4">
                 Resumo Rápido
               </h3>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 text-sm sm:text-base lg:text-lg space-y-2">
                 <li>
                   <span className="font-semibold">Nome:</span> Pedro Virgilio
                 </li>
