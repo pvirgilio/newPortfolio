@@ -43,8 +43,7 @@ const TextIntroductionSection = () => {
       data-scroll
       data-scroll-speed="2"
     >
-      <div className="flex justify-center flex-wrap text-white gap-1 sm:gap-2 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-center">
-        <h1>Olá, meu nome é</h1>
+      <div className="flex justify-center flex-wrap text-white gap-1 sm:gap-2 text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl font-bold text-center">
         <h2 className="whitespace-nowrap text-gradient">Pedro Virgilio</h2>
       </div>
       <div className="flex justify-center text-white flex-wrap gap-1 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-center mt-2">

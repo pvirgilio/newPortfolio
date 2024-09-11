@@ -58,14 +58,6 @@ export function FooterComponent() {
               </li>
               <li>
                 <Link
-                  href="/#about"
-                  className="hover:text-[#AD2B49] transition-colors duration-300"
-                >
-                  Sobre Mim
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/#contact"
                   className="hover:text-[#AD2B49] transition-colors duration-300"
                 >
@@ -87,16 +79,13 @@ export function FooterComponent() {
                   href="mailto:seu-email@exemplo.com"
                   className="hover:underline"
                 >
-                  seu-email@exemplo.com
+                  pedrovirgilio@outlook.com.br
                 </a>
               </li>
-              <li className="flex items-center">
-                <FaPhone className="mr-2 text-[#AD2B49]" />
-                <span>(XX) XXXX-XXXX</span>
-              </li>
+
               <li className="flex items-center">
                 <FaMapMarkerAlt className="mr-2 text-[#AD2B49]" />
-                <span>Sua Cidade, Estado</span>
+                <span>Teresina, Piauí</span>
               </li>
             </ul>
           </div>

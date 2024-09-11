@@ -142,7 +142,7 @@ export const ServicesSection = () => {
         <PrefixSection text="../services" />
         <h2
           ref={titleRef}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-12"
+          className="h2 font-bold text-white mb-12"
         >
           Meus Serviços
         </h2>

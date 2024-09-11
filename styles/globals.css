@@ -8,6 +8,10 @@
   }
 }
 
+.h2 {
+  @apply text-3xl sm:text-4xl 2xl:text-5xl;
+}
+
 :root {
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */

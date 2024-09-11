@@ -83,16 +83,19 @@ export default function AboutMeSection() {
     <section
       ref={sectionRef}
       id="about-me"
-      className="w-full relative overflow-hidden bg-[#070707] min-h-screen py-20 lg:py-24"
-      data-scroll-section
+      className="w-full relative overflow-hidden bg-[#070707] min-h-screen py-20 lg:py-24 flex flex-col gap-10 lg:gap-14"
+      // data-scroll-section
     >
-      <article className="relative container w-full h-full flex flex-col lg:px-0 max-w-7xl mx-auto">
-        <article className="flex flex-col items-center lg:flex-row gap-12 lg:gap-20 lg:items-start">
-          <PrefixSection text="../about" classe="lg:hidden -mb-5" />
-          <h2 className="block text-white lg:hidden text-3xl font-bold mx-auto lg:mx-0 w-fit border-b-2 border-[#AD2B49] pb-2">
+      <div className="container lg:px-0 w-full flex justify-start">
+        <div className="flex flex-col items-start justify-center">
+          <PrefixSection text="../about" classe="" />
+          <h2 className=" text-white text-3xl sm:text-4xl 2xl:text-5xl font-bold mx-auto lg:mx-0 w-fit ">
             Sobre mim
           </h2>
-
+        </div>
+      </div>
+      <article className="relative container w-full h-full flex flex-col lg:px-0 max-w-7xl mx-auto">
+        <article className="flex flex-col items-center lg:flex-row gap-12 lg:gap-20 lg:items-start">
           <article className="lg:w-1/3 flex flex-col items-center text-center lg:text-left">
             <div
               ref={imageRef}
@@ -136,19 +139,15 @@ export default function AboutMeSection() {
             ref={contentRef}
             className="lg:w-2/3 flex flex-col items-center lg:items-start space-y-4"
           >
-            <PrefixSection text="../about" classe="hidden lg:block" />
-            <h2 className="hidden lg:block text-white text-3xl sm:text-4xl 2xl:text-5xl font-bold mx-auto lg:mx-0 w-fit ">
-              Sobre mim
-            </h2>
-            <Divider className="" />
-            <p className="text-lg sm:text-xl 2xl:text-2xl text-gray-300 leading-relaxed">
+            {/* <Divider className="" /> */}
+            <p className="text-base sm:text-lg 2xl:text-xl text-gray-300 leading-relaxed">
               Olá! Sou um recém-formado em Ciência da Computação, apaixonado por
               desenvolvimento web. Como desenvolvedor Front-End, tenho
               experiência em React, Next.js, TailwindCSS e Styled-Components,
               mas meu objetivo é me tornar um desenvolvedor Full-Stack completo.
             </p>
 
-            <p className="text-lg sm:text-xl 2xl:text-2xl text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg 2xl:text-xl text-gray-300 leading-relaxed">
               Minha experiência abrange várias tecnologias, incluindo{" "}
               <span className="italic text-[#AD2B49] font-semibold">
                 HTML, CSS, JavaScript, Node, React e Next.js
@@ -163,13 +162,13 @@ export default function AboutMeSection() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
+                  "JavaScript",
                   "React",
                   "Next.js",
-                  "TypeScript",
                   "TailwindCSS",
                   "Node.js",
                   "Responsive Design",
-                  "UI/UX",
+
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -185,15 +184,13 @@ export default function AboutMeSection() {
               <h3 className="text-2xl font-semibold text-[#AD2B49] mb-4">
                 Interesses e Objetivos
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <ul className="text-base sm:text-lg 2xl:text-xl  list-disc list-inside text-gray-300 space-y-2">
                 <li>Aprofundar conhecimentos em desenvolvimento Full-Stack</li>
-                <li>Explorar aplicações de Inteligência Artificial na web</li>
                 <li>Aprimorar habilidades em UX/UI Design</li>
-                <li>Contribuir para projetos de código aberto</li>
               </ul>
             </div>
 
-            <Icons />
+            {/* <Icons /> */}
           </div>
         </article>
       </article>

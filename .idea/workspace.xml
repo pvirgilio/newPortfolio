@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e362fd-099b-46cb-8e3f-0b7036b10a1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/AboutMeSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/AboutMeSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/IntroductionSection/ImgIntroductionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/IntroductionSection/ImgIntroductionSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/IntroductionSection/IntroductionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/IntroductionSection/IntroductionSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/IntroductionSection/TextIntroductionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/IntroductionSection/TextIntroductionSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/Projects/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Projects/CardProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Home/ProjectSection/odontosite.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Home/ProjectSection/odontosite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/ServicesSection/ServicesSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/ServicesSection/ServicesSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/SkillSection/SkillSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/SkillSection/SkillSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/fonts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "settings.editor.splitter.proportion": "0.24227643",
     "ts.external.directory.path": "C:\\Users\\Pedro\\Documents\\Projetos\\newPortfolio\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -67,6 +69,10 @@
       <workItem from="1725805222108" duration="38000" />
       <workItem from="1725805268011" duration="11000" />
       <workItem from="1725805293705" duration="1439000" />
+      <workItem from="1726078052940" duration="3167000" />
+      <workItem from="1726085001268" duration="570000" />
+      <workItem from="1726085584579" duration="46000" />
+      <workItem from="1726085636437" duration="736000" />
     </task>
     <servers />
   </component>

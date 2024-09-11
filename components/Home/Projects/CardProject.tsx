@@ -96,7 +96,7 @@ const CardProject = ({
   }, []);
 
   return (
-    <Card ref={cardRef} className="w-full max-w-[400px] h-[450px] bg-[#1A1A1A]">
+    <Card ref={cardRef} className="w-full max-w-[400px] h-fit bg-[#1A1A1A]">
       <CardBody className="p-0">
         <div className="relative w-full h-48">
           <Image

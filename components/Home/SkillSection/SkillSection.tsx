@@ -89,13 +89,13 @@ export default function SkillSection() {
         <PrefixSection text="../skills" />
         <h2
           ref={titleRef}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left"
+          className="h2 font-bold text-white mb-4 sm:mb-6 text-center lg:text-left"
         >
           Habilidades
         </h2>
         <p
           ref={descRef}
-          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-2xl text-center lg:text-left leading-relaxed"
+          className="text-base sm:text-lg 2xl:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl text-center lg:text-left leading-relaxed"
         >
           Minha experiência abrange uma ampla gama de tecnologias e ferramentas.
           Aqui estão algumas das principais habilidades que utilizo em meus
