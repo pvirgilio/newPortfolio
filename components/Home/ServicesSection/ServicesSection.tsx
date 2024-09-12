@@ -138,12 +138,9 @@ export const ServicesSection = () => {
       ref={sectionRef}
       className="bg-[#070707] py-20 relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 lg:!px-0 relative z-10">
         <PrefixSection text="../services" />
-        <h2
-          ref={titleRef}
-          className="h2 font-bold text-white mb-12"
-        >
+        <h2 ref={titleRef} className="h2 font-bold text-white mb-12">
           Meus Serviços
         </h2>
         <div

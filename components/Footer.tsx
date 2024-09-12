@@ -12,7 +12,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 export function FooterComponent() {
   return (
     <footer className="bg-gradient-to-b from-[#111111] to-[#070707] text-white py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:!px-0">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="col-span-1 md:col-span-2">

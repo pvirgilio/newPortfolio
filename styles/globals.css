@@ -41,6 +41,15 @@
   }
 }
 
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -377,4 +386,8 @@ body {
 .animate-marquee {
   display: inline-flex;
   animation: marquee 30s linear infinite;
+}
+
+.animate-right {
+  animation: moveToRight 1s linear ease-in-out;
 }

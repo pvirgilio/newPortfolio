@@ -85,7 +85,7 @@ export default function SkillSection() {
       className="w-full bg-gradient-to-b from-[#111111] to-[#070707] py-16 sm:py-20 md:py-24 lg:py-28"
       data-scroll-section
     >
-      <div className="container mx-auto px-4 lg:px-6 flex flex-col items-center lg:items-start">
+      <div className="container mx-auto px-4 lg:!px-0 flex flex-col items-center lg:items-start">
         <PrefixSection text="../skills" />
         <h2
           ref={titleRef}

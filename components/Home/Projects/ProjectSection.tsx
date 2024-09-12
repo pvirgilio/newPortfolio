@@ -79,7 +79,7 @@ export default function ProjectSection() {
 
   return (
     <section ref={sectionRef} className="w-full h-full bg-[#111111]">
-      <div className="container lg:px-0 flex flex-col gap-5 py-16 sm:py-20">
+      <div className="container lg:!px-0 flex flex-col gap-5 py-16 sm:py-20">
         <div className="w-full">
           <PrefixSection
             text="../projects"

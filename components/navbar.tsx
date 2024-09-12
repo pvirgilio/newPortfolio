@@ -28,7 +28,7 @@ export default function Nav() {
 
   return (
     <Navbar
-      className=" container !bg-[#070707]  backdrop-blur-md  w-full lg:px-5 lg:rounded-full lg:top-3  "
+      className="container lg:rounded-full lg:top-2  w-full  backdrop-blur-sm   "
       isMenuOpen={isMenuOpen}
       position="sticky"
       onMenuOpenChange={setIsMenuOpen}
@@ -56,7 +56,7 @@ export default function Nav() {
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
           <Link
-            className="text-white text-lg"
+            className="text-white text-base"
             color={path === "/" ? "primary" : "foreground"}
             href="/"
           >
@@ -65,7 +65,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white text-lg"
+            className="text-white text-base"
             color={path === "/" ? "primary" : "foreground"}
             href="/projects"
           >
@@ -74,7 +74,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white text-lg"
+            className="text-white text-base"
             color={path === "/" ? "primary" : "foreground"}
             href="/#contact"
           >

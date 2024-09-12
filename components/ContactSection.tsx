@@ -7,7 +7,7 @@ import React from "react";
 export default function ContactSection() {
   return (
     <section id="contact" className="w-full bg-[#070707] pb-20 pt-20  ">
-      <div className="container lg:px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
+      <div className="container lg:!px-0 w-full h-full flex flex-col items-center justify-center md:flex-row gap-10">
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-5  ">
           <h2 className="font-bold text-white text-2xl sm:text-3xl 2xl:text-4xl">
             Envie uma mensagem
