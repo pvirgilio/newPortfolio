@@ -23,7 +23,7 @@ const cardData = [
     description: "Site institucional para empresa de tecnologia.",
     image: "/Home/ProjectSection/savantwebImg.png",
     linkGithub: "https://github.com/pvirgilio/savant-newportoflio.git",
-    linkSite: "https://savantweb.com.br/",
+    linkSite: "https://savantweb.netlify.app/",
     technologies: ["Html", "Css", "JavaScript"],
   },
   {
@@ -55,11 +55,13 @@ const cardData = [
   },
   {
     model: "Ecommerce",
-    title: "Iceberg bebibas",
-    description: "Free-lancer. Atuei como um dos desenvolvedores front-end no projeto.",
+    title: "Modelo de Ecommerce",
+    description:
+      "Free-lancer. Atuei como um dos desenvolvedores front-end no projeto.",
     image: "/Home/ProjectSection/ecommerce-bebidas.png",
-    linkSite: "",
+    linkSite: "https://ecommerce-bebidas.vercel.app/home",
     linkGithub: "https://github.com/pvirgilio/ecommerce_bebidas.git",
+
     technologies: ["React", "Next.js", "TailwindCSS"],
   },
 ];
@@ -113,7 +115,6 @@ const CardProject = ({
             className="object-cover "
             src={image}
             loading="lazy"
-
             layout="fill"
           />
           <div className="absolute top-2 left-2 backdrop-blur-sm bg-black/60 text-white text-xs sm:text-sm font-medium px-2 py-1 rounded">
@@ -124,7 +125,9 @@ const CardProject = ({
           <h4 className="text-white font-semibold text-lg sm:text-xl xl:text-2xl mb-2">
             {title}
           </h4>
-          <p className="text-gray-300 text-xs sm:text-sm lg:text-base mb-4">{description}</p>
+          <p className="text-gray-300 text-xs sm:text-sm lg:text-base mb-4">
+            {description}
+          </p>
           <div className="flex flex-wrap gap-2 mb-4">
             {technologies.map((tech, index) => (
               <Chip
@@ -152,7 +155,6 @@ const CardProject = ({
         <Button
           as={Link}
           href={linkSite}
-          isDisabled={title === "Iceberg bebibas"}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#AD2B49] text-white text-xs sm:text-sm"
@@ -170,7 +172,9 @@ export function CardsProjectSection() {
   const displayProjects =
     path === "/projects" ? cardData : cardData.slice(0, 3);
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 place-items-center ${path === '/projects' ? 'mt-10 lg:mt-20' : ''}`}>
+    <div
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 place-items-center ${path === "/projects" ? "mt-10 lg:mt-20" : ""}`}
+    >
       {displayProjects.map((card, index) => (
         <CardProject
           key={index}
